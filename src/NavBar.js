@@ -88,18 +88,13 @@ const navBarData = [
 function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
 
-  const menuShow = (mItems, parentPath = "") => {
+  const menuShow = (mItems, parentPath = '') => {
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;
 
       if (item.submenu) {
         return (
-          <NavDropdown
-            title={item.label}
-            key={index}
-            className="dropdown-menu-dark dropdown"
-            role="menu"
-          >
+          <NavDropdown title={item.label} key={index} className="dropdown-menu-dark dropdown" role="menu">
             {menuShow(item.submenu, `${fullPath}/`)}
           </NavDropdown>
         );
@@ -119,7 +114,7 @@ function NavBar() {
 
   return (
     <div className="navbackground">
-      <div style={{ display: "flex", justifyContent: "space-between", padding: "10px" }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
         <Navbar.Brand as={Link} to="/" role="menuitem">
           {/* Uncomment and customize the logo */}
           {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}
@@ -137,9 +132,7 @@ function NavBar() {
         >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              {menuShow(navBarData)}
-            </Nav>
+            <Nav className="mr-auto">{menuShow(navBarData)}</Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

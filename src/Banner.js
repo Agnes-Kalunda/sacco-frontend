@@ -6,8 +6,8 @@ import utuImage from './assets/utu.png';
 import bosaImage from './assets/bosa.jpeg';
 import handshake from './assets/handshake.jpg'
 import dark from './assets/dark.jpg'
-import dark2 from './assets/dark2.jpg'
-import dark3 from './assets/dark3.jpg'
+import dark4 from './assets/dark4.jpg'
+import dark5 from './assets/dark5.jpg'
 
 function Banner() {
   const imageStyle = {
@@ -20,7 +20,7 @@ function Banner() {
     <div style={{ paddingTop: '5%'}}>
       <Carousel fade style={{ height: '300px' }}>
         <Carousel.Item>
-          <img className="d-block w-100" src={dark } alt="First slide" style={imageStyle} />
+          <img className="d-block w-100" src={dark5} alt="First slide" style={imageStyle} />
           <Carousel.Caption>
             <h3>Why Unity Sacco ?</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -28,7 +28,7 @@ function Banner() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={dark} alt="Second slide" style={imageStyle} />
+          <img className="d-block w-100" src={dark5} alt="Second slide" style={imageStyle} />
           <Carousel.Caption>
             <h3>Save with us today.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -36,7 +36,7 @@ function Banner() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={dark2} alt="Third slide" style={imageStyle} />
+          <img className="d-block w-100" src={dark5} alt="Third slide" style={imageStyle} />
           <Carousel.Caption>
             <h3>Borrow from us.</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -44,7 +44,7 @@ function Banner() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={dark3} alt="Third slide" style={imageStyle} />
+          <img className="d-block w-100" src={dark5} alt="Third slide" style={imageStyle} />
           <Carousel.Caption>
             <h3>We keep you informed</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

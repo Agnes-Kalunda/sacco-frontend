@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from './assets/logg.png';
+import logo from "./assets/logg.png";
 
 const navBarData = [
   {
@@ -12,16 +12,16 @@ const navBarData = [
     label: "ABOUT US",
     submenu: [
       {
-        label: "Vision, Mission and Core Values",
-        url: "/about-us", // Updated URL for the "About Us" dropdown
+        label: "Vision, Mission and Focus",
+        url: "about-us", // Updated URL for the "About Us" dropdown
       },
       {
         label: "Our Heritage",
-        url: "/about-us/ourheritage", // Updated URL for the "Our Heritage" page
+        url: "about-us/our-heritage", // Updated URL for the "Our Heritage" page
       },
       {
         label: "Leadership",
-        url: "/about-us/leadership", // Updated URL for the "Leadership" page
+        url: "about-us/leadership", // Updated URL for the "Leadership" page
       },
     ],
   },
@@ -34,15 +34,15 @@ const navBarData = [
       },
       {
         label: "Save with us today",
-        url: "/save",
+        url: "/join/save-with-us",
       },
       {
         label: "Borrow from us today",
-        url: "/borrow",
+        url: "/join/borrow-from-us",
       },
       {
         label: "Loan eligibility",
-        url: "/loaneligibility",
+        url: "/join/loan-eligibility",
       },
     ],
   },
@@ -51,27 +51,27 @@ const navBarData = [
     submenu: [
       {
         label: "Payment Modes",
-        url: "/paymentmodes",
+        url: "/resources/payment-modes",
       },
       {
         label: "Policies",
-        url: "/policies",
+        url: "/resources/policies",
       },
       {
         label: "Newsletter",
-        url: "/newsletter",
+        url: "/resources/newsletter",
       },
       {
         label: "Downloads",
-        url: "/downloads",
+        url: "/resources/downloads",
       },
       {
         label: "Gallery",
-        url: "/gallery",
+        url: "/resources/gallery",
       },
       {
         label: "FAQs",
-        url: "/faqs",
+        url: "/resources/faqs",
       },
     ],
   },
@@ -81,20 +81,25 @@ const navBarData = [
   },
   {
     label: "CONTACT US",
-    url: "/contactus",
+    url: "/contact-us",
   },
 ];
 
 function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
 
-  const menuShow = (mItems, parentPath = '') => {
+  const menuShow = (mItems, parentPath = "") => {
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;
 
       if (item.submenu) {
         return (
-          <NavDropdown title={item.label} key={index} className="dropdown-menu-dark dropdown" role="menu">
+          <NavDropdown
+            title={item.label}
+            key={index}
+            className="dropdown-menu-dark dropdown"
+            role="menu"
+          >
             {menuShow(item.submenu, `${fullPath}/`)}
           </NavDropdown>
         );
@@ -114,7 +119,13 @@ function NavBar() {
 
   return (
     <div className="navbackground">
-      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "10px",
+        }}
+      >
         <Navbar.Brand as={Link} to="/" role="menuitem">
           {/* Uncomment and customize the logo */}
           {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}

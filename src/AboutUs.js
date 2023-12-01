@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import bosa from "./assets/bosa.jpeg";
 import chama from "./assets/chama.jpeg";
+import { Outlet } from "react-router-dom";
 
 function AboutUs() {
   // Function to scroll to the "Office Location" section when the button is clicked
@@ -81,6 +82,7 @@ function AboutUs() {
         </Col>
       </Row>
     </Container>
+  
   );
 }
 

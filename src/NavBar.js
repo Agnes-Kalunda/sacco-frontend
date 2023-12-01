@@ -1,8 +1,6 @@
-// ... (your previous imports)
 import React, { useState } from "react";
-import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "./assets/logg.png";
 
 const navBarData = [
   {
@@ -15,7 +13,7 @@ const navBarData = [
     submenu: [
       {
         label: "Vision, Mission and Focus",
-        url: "vision",
+        url: "",
       },
       {
         label: "Our Heritage",
@@ -29,51 +27,53 @@ const navBarData = [
   },
   {
     label: "SAVE AND BORROW",
+    url: "/join",
     submenu: [
       {
         label: "Join us today",
-        url: "/join",
+        url: "",
       },
       {
         label: "Save with us today",
-        url: "/join/save-with-us",
+        url: "save-with-us",
       },
       {
         label: "Borrow from us today",
-        url: "/join/borrow-from-us",
+        url: "borrow-from-us",
       },
       {
         label: "Loan eligibility",
-        url: "/join/loan-eligibility",
+        url: "loan-eligibility",
       },
     ],
   },
   {
     label: "RESOURCES",
+    url: "resources",
     submenu: [
       {
         label: "Payment Modes",
-        url: "/resources/payment-modes",
+        url: "",
       },
       {
         label: "Policies",
-        url: "/resources/policies",
+        url: "policies",
       },
       {
         label: "Newsletter",
-        url: "/resources/newsletter",
+        url: "newsletter",
       },
       {
         label: "Downloads",
-        url: "/resources/downloads",
+        url: "downloads",
       },
       {
         label: "Gallery",
-        url: "/resources/gallery",
+        url: "gallery",
       },
       {
         label: "FAQs",
-        url: "/resources/faqs",
+        url: "faqs",
       },
     ],
   },
@@ -91,7 +91,7 @@ function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
 
   const navbarItemStyle = {
-    color: navbarExpanded ? "white" : "#2E8B57",
+    color: navbarExpanded ? "black" : "#2E8B57",
   };
 
   const dropdownItemStyle = {
@@ -111,8 +111,7 @@ function NavBar() {
             key={index}
             className="dropdown-menu-dark dropdown"
             role="menu"
-            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}
-          >
+            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}>
             {menuShow(item.submenu, `${fullPath}/`)}
           </NavDropdown>
         );
@@ -126,8 +125,7 @@ function NavBar() {
             className={`nav-item${
               isSpecialMenuItem ? " special-menu-item" : ""
             }`}
-            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}
-          >
+            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}>
             {item.label}
           </Nav.Link>
         );
@@ -147,8 +145,7 @@ function NavBar() {
           justifyContent: "space-between",
           padding: "10px",
           width: "100%",
-        }}
-      >
+        }}>
         <Navbar.Brand as={Link} to="/" role="menuitem">
           {/* Uncomment and customize the logo */}
           {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}
@@ -157,18 +154,19 @@ function NavBar() {
           Member Login
         </Button>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex ">
         <Navbar
+          className="container-fluid "
           bg="#2E8B57"
           expand="lg"
           variant=""
+
           role="navigation"
           expanded={navbarExpanded}
-          onToggle={handleNavbarToggle}
-        >
+          onToggle={handleNavbarToggle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">{menuShow(navBarData)}</Nav>
+            <Nav className="mr-auto container-fluid flex justify-content-center">{menuShow(navBarData)}</Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

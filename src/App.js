@@ -1,30 +1,25 @@
 import { Route, Routes } from "react-router-dom";
+import AboutUs from "./AboutUs";
 import "./App.css";
-import NavBar from "./NavBar";
-import Socials from "./Socials";
-import Services from "./services";
-import Footer from "./Footer";
-import Banner from "./Banner";
-import WorkWithUs from "./workWithUs";
-import Hero from "./Hero";
-import Home from "./Home";
 import Careers from "./Careers";
 import ContactUs from "./ContactUs";
-import Heritage from "./Heritage";
-import Faqs from "./Faqs";
-import Gallery from "./Gallery";
 import Downloads from "./Downloads";
+import Faqs from "./Faqs";
+import Footer from "./Footer";
+import Gallery from "./Gallery";
+import Heritage from "./Heritage";
+import Home from "./Home";
 import Leadership from "./Leadership";
 import LoanEligibility from "./LoanEligibility";
-import Policies from "./Policies";
-import PaymentModes from "./PaymentModes";
-import Savings from "./Savings";
-import Newsletter from "./Newsletter";
 import Loans from "./Loans";
-import Join from "./Register";
 import Login from "./Login";
-import Vision from "./Vision";
-import AboutUs from "./AboutUs";
+import NavBar from "./NavBar";
+import Newsletter from "./Newsletter";
+import PaymentModes from "./PaymentModes";
+import Policies from "./Policies";
+import Register from "./Register";
+import Savings from "./Savings";
+import Socials from "./Socials";
 
 function App() {
   return (
@@ -36,22 +31,29 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/about-us" element={<Leadership />}>
-            <Route index element={<Vision />} />
+          <Route path="/about-us">
+            <Route index element={<AboutUs />} />
             <Route path="our-heritage" element={<Heritage />} />
-            <Route path="leadership" element={<AboutUs />} />
+            <Route path="leadership" element={<Leadership />} />
           </Route>
 
-          <Route path="/join" element={<Join />} />
-          <Route path="/join/save-with-us" element={<Savings />} />
-          <Route path="/join/borrow-from-us" element={<Loans />} />
-          <Route path="/join/loan-eligibility" element={<LoanEligibility />} />
-          <Route path="/resources/payment-modes" element={<PaymentModes />} />
-          <Route path="/resources/policies" element={<Policies />} />
-          <Route path="/resources/newsletter" element={<Newsletter />} />
-          <Route path="/resources/downloads" element={<Downloads />} />
-          <Route path="/resources/gallery" element={<Gallery />} />
-          <Route path="/resources/faqs" element={<Faqs />} />
+          <Route path="/join">
+            <Route index element={<Register />} />
+            <Route path="save-with-us" element={<Savings />} />
+            <Route path="borrow-from-us" element={<Loans />} />
+            <Route path="loan-eligibility" element={<LoanEligibility />} />
+          </Route>
+
+          <Route path="/resources" >
+            <Route index element={<PaymentModes />} />
+            <Route path="payment-modes" element={<PaymentModes />} />
+            <Route path="policies" element={<Policies />} />
+            <Route path="newsletter" element={<Newsletter />} />
+            <Route path="downloads" element={<Downloads />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="faqs" element={<Faqs />} />
+          </Route>
+
           <Route path="login" element={<Login />} />
         </Routes>
       </div>

@@ -19,15 +19,34 @@ const Socials = () => {
         display: "flex",
         alignItems: "center",
         width: "100%",
-        height: "150px",
+        height: "50px",
       }}
     >
-      <h6 style={{ color: "black" }}>
+
+      
+
+      <div class="container">
+  <div class="d-flex">
+    <div class="p-2">
+    <h6 style={{ color: "black" }}>
         <small>
           <i className="fas fa-envelope mr-3"></i> unitysacco@gmail.com
         </small>
       </h6>
-      <h6></h6>
+    </div>
+    <div class="p-2">
+
+    <h6 style={{ color: "black" }}>
+        <small>
+          <i className="fas fa-phone mr-3"></i> 07000000000
+        </small>
+      </h6>
+
+    </div>
+   
+  </div>
+</div>
+     
 
       <div className="socialLinks">
         <a href="#">

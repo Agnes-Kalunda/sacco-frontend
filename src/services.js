@@ -65,7 +65,7 @@ function Services() {
                 <FontAwesomeIcon
                   icon={card.icon}
                   size="3x"
-                  style={{ margin: "20px auto" }}
+                  style={{ margin: "20px auto", color: "#2E8B57" }}
                 />
                 <Card.Body>
                   <Card.Title>

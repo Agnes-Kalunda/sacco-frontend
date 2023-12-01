@@ -19,7 +19,7 @@ const containerStyle = {
   paddingTop: "20px",
 };
 
-function ContactUs() {
+function Heritage() {
   return (
     <Container style={containerStyle}>
       <Row>
@@ -195,4 +195,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Heritage;

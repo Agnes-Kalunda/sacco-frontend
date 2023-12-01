@@ -5,7 +5,7 @@ function Hero() {
     <div>
       <h3
         className=""
-        style={{ marginBottom: "10px", paddingTop: "2rem", color: "green" }}
+        style={{ marginBottom: "10px", paddingTop: "2rem", color: "#2E8B57" }}
       >
         <strong>Empowering your financial future.</strong>
       </h3>

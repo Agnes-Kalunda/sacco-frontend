@@ -101,9 +101,13 @@ function NavBar() {
   const specialItems = ["HOME", "CAREERS", "CONTACT US"]; // Update this array with the labels you want to be white
 
   const menuShow = (mItems, parentPath = "") => {
+    const handleDropdownItemClick = () => {
+      setNavbarExpanded(false); // Close the navbar when a dropdown item is clicked
+    };
+  
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;
-
+  
       if (item.submenu) {
         return (
           <NavDropdown
@@ -111,7 +115,8 @@ function NavBar() {
             key={index}
             className="dropdown-menu-dark dropdown"
             role="menu"
-            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}>
+            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}
+          >
             {menuShow(item.submenu, `${fullPath}/`)}
           </NavDropdown>
         );
@@ -122,10 +127,10 @@ function NavBar() {
             as={Link}
             to={fullPath}
             key={index}
-            className={`nav-item${
-              isSpecialMenuItem ? " special-menu-item" : ""
-            }`}
-            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}>
+            className={`nav-item${isSpecialMenuItem ? " special-menu-item" : ""}`}
+            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}
+            onClick={handleDropdownItemClick} // Close navbar on dropdown item click
+          >
             {item.label}
           </Nav.Link>
         );

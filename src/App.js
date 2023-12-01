@@ -23,6 +23,8 @@ import Newsletter from "./Newsletter";
 import Loans from "./Loans";
 import Join from "./Register";
 import Login from "./Login";
+import Vision from "./Vision";
+import AboutUs from "./AboutUs";
 
 function App() {
   return (
@@ -34,8 +36,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="about-us/our-heritage" element={<Heritage />} />
-          <Route path="about-us/leadership" element={<Leadership />} />
+          <Route path="/about-us" element={<Leadership />}>
+            <Route index element={<Vision />} />
+            <Route path="our-heritage" element={<Heritage />} />
+            <Route path="leadership" element={<AboutUs />} />
+          </Route>
+
           <Route path="/join" element={<Join />} />
           <Route path="/join/save-with-us" element={<Savings />} />
           <Route path="/join/borrow-from-us" element={<Loans />} />

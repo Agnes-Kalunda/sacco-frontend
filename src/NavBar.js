@@ -1,3 +1,4 @@
+// ... (your previous imports)
 import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -10,18 +11,19 @@ const navBarData = [
   },
   {
     label: "ABOUT US",
+    url: "/about-us",
     submenu: [
       {
         label: "Vision, Mission and Focus",
-        url: "about-us", // Updated URL for the "About Us" dropdown
+        url: "vision",
       },
       {
         label: "Our Heritage",
-        url: "about-us/our-heritage", // Updated URL for the "Our Heritage" page
+        url: "our-heritage",
       },
       {
         label: "Leadership",
-        url: "about-us/leadership", // Updated URL for the "Leadership" page
+        url: "leadership",
       },
     ],
   },
@@ -88,6 +90,16 @@ const navBarData = [
 function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
 
+  const navbarItemStyle = {
+    color: navbarExpanded ? "white" : "#2E8B57",
+  };
+
+  const dropdownItemStyle = {
+    color: "black", // Set color to black for dropdown items
+  };
+
+  const specialItems = ["HOME", "CAREERS", "CONTACT US"]; // Update this array with the labels you want to be white
+
   const menuShow = (mItems, parentPath = "") => {
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;
@@ -99,13 +111,23 @@ function NavBar() {
             key={index}
             className="dropdown-menu-dark dropdown"
             role="menu"
+            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}
           >
             {menuShow(item.submenu, `${fullPath}/`)}
           </NavDropdown>
         );
       } else {
+        const isSpecialMenuItem = specialItems.includes(item.label);
         return (
-          <Nav.Link as={Link} to={fullPath} key={index} className="nav-item">
+          <Nav.Link
+            as={Link}
+            to={fullPath}
+            key={index}
+            className={`nav-item${
+              isSpecialMenuItem ? " special-menu-item" : ""
+            }`}
+            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}
+          >
             {item.label}
           </Nav.Link>
         );
@@ -124,17 +146,20 @@ function NavBar() {
           display: "flex",
           justifyContent: "space-between",
           padding: "10px",
+          width: "100%",
         }}
       >
         <Navbar.Brand as={Link} to="/" role="menuitem">
           {/* Uncomment and customize the logo */}
           {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}
         </Navbar.Brand>
-        <Button variant="outline-success">Member Login</Button>
+        <Button variant="btn btn-primary" style={{ color: "white" }}>
+          Member Login
+        </Button>
       </div>
       <div className="d-flex justify-content-center">
         <Navbar
-          bg="white"
+          bg="#2E8B57"
           expand="lg"
           variant=""
           role="navigation"

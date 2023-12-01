@@ -10,7 +10,7 @@ import logo from "./assets/logg.png";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white pt-5 pb-4">
+    <footer className="bg-green text-white pt-5 pb-4">
       <div className="container">
         {/* First Row */}
 
@@ -22,13 +22,13 @@ function Footer() {
             >
               <strong>ABOUT US</strong>
             </h6>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Our vision and Mission</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Unity Sacco Heritage</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Unity Sacco Leadership</small>
             </p>
           </div>
@@ -40,16 +40,16 @@ function Footer() {
             >
               <strong>SERVICES</strong>
             </h6>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Savings Schemes</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Loans Offered</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Shares</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Loan Products</small>
             </p>
           </div>
@@ -61,13 +61,13 @@ function Footer() {
             >
               <strong>SAVINGS</strong>
             </h6>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Bosa shares</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Handshake Deposits</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Jikakamue savings</small>
             </p>
           </div>
@@ -79,16 +79,16 @@ function Footer() {
             >
               <strong>LOANS</strong>
             </h6>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Utu Bora Lending</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Education Loans</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Mobile Loans</small>
             </p>
-            <p className="hover-green">
+            <p className="hover-black">
               <small>Karibu Loans</small>
             </p>
           </div>
@@ -100,17 +100,17 @@ function Footer() {
             >
               <strong>OUR OFFICES</strong>
             </h6>
-            <p className="hover-green">
+            <p className="">
               <small>
                 <i className="fas fa-map-marker mr-3"></i> Nairobi, Kenya
               </small>
             </p>
-            <p className="hover-green">
+            <p className="">
               <small>
                 <i className="fas fa-envelope mr-3"></i> Unitysacco@gmail.com
               </small>
             </p>
-            <p className="hover-green">
+            <p className="">
               <small>
                 <i className="fas fa-phone mr-3"></i> +254 000 0000
               </small>

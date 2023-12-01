@@ -43,7 +43,7 @@
 
 
 .socials{
-  background-color:#343a40;
+  background-color:#2E8B57;
   color: white;
   display: flex;
   justify-content: space-evenly;
@@ -56,16 +56,24 @@
   justify-content: space-evenly;
 }
 
+.nav-item{
+  color: #00a859;
+}
+
 .nav-item:hover {
-  color: darkgreen !important;
+  color:  #FFAC1C !important;
 }
 
 .nav-item .nav-link:hover {
-  color: green !important;
+  color: #FFAC1C !important;
+}
+
+.nav-item .nav-link{
+  color: white;
 }
 
 .navbackground{
-  background-color:white;
+  background-color:#2E8B57;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
@@ -206,6 +214,17 @@ nav {
     height: 200px; /* Adjust the height for even smaller screens */
   }
 }
+@media (max-width: 768px) {
+  .dropdown-menu .dropdown-item {
+    color: black !important;
+  }
+
+  /* Use a more specific selector to override the media query rule */
+  .dropdown-menu .dropdown-item.custom-dropdown-item {
+    color: red; /* Your desired color for dropdown items on smaller screens */
+  }
+}
+
 
 .card-image {
   width: 100%;
@@ -249,7 +268,7 @@ nav {
   position: absolute;
   width: 50%; /* Adjust the width of the line */
   height: 2px; /* Adjust the thickness of the line */
-  background-color: green; /* Set the color of the line */
+  background-color: #FFAC1C; /* Set the color of the line */
   bottom: 0;
   left: 25%; /* Adjust the position of the line */
   margin-top: 5px; /* Adjust the space between the line and text */
@@ -308,8 +327,8 @@ img {
 }
 
 
-.hover-green:hover {
-  color: green;
+.hover-black:hover {
+  color: #FFAC1C;
 }
 
 .employee-grid {
@@ -358,7 +377,9 @@ h2 {
 
 
 
-
+.fa-icon {
+  color: green;
+}
 .text {
   font-size: 20px;
   padding-left: 20px; /* Adjust the padding to your preference */
@@ -443,3 +464,37 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+
+.bg-green {
+  background-color: #2e8b57;
+}
+
+
+
+
+
+/* styles.css */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 16px; /* Adjust the gap between images */
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+

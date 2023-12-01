@@ -8,21 +8,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Socials = () => {
-  const iconStyle = { color: "white", marginRight: "12px" }; // Adjust the marginRight as needed
+  const iconStyle = { color: "black", marginRight: "12px" }; // Adjust the marginRight as needed
 
   return (
     <div
       className="socials"
       style={{
-        backgroundColor: "#212529",
+        backgroundColor: "white",
         color: "white",
         display: "flex",
         alignItems: "center",
         width: "100%",
-        height: "50px",
+        height: "150px",
       }}
     >
-      <h6>
+      <h6 style={{ color: "black" }}>
         <small>
           <i className="fas fa-envelope mr-3"></i> unitysacco@gmail.com
         </small>

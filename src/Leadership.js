@@ -13,6 +13,7 @@ const employees = [
 ];
 
 const Leadership = () => {
+  console.log("Leadership component rendered");
   return (
     <div>
       <h2

@@ -17,7 +17,7 @@ function Banner() {
   };
 
   return (
-    <div style={{ paddingTop: "5%" }}>
+    <div style={{ paddingTop: "0%" }}>
       <Carousel fade style={{ height: "300px" }}>
         <Carousel.Item>
           <img

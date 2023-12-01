@@ -101,9 +101,10 @@ function NavBar() {
   const specialItems = ["HOME", "CAREERS", "CONTACT US"]; // Update this array with the labels you want to be white
 
   const menuShow = (mItems, parentPath = "") => {
-    const handleDropdownItemClick = () => {
-      setNavbarExpanded(false); // Close the navbar when a dropdown item is clicked
-    };
+  const handleDropdownItemClick = () => {
+  setNavbarExpanded(false); // Close the navbar when a dropdown item is clicked
+};
+
   
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;

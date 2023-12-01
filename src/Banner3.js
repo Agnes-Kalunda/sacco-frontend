@@ -1,6 +1,6 @@
 import React from "react";
 
-function Banner2() {
+function Banner3() {
   const containerStyle = {
     width: "85%",
     height: "270px",
@@ -12,7 +12,7 @@ function Banner2() {
 
   const colStyle = {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column", // Change to column direction
     alignItems: "flex-start",
     justifyContent: "center",
     gap: "5px",
@@ -35,7 +35,8 @@ function Banner2() {
 
   return (
     <div className="container" style={containerStyle}>
-      <div className="row">
+      {/* Change row to column */}
+      <div className="row" style={{ flexDirection: "column" }}>
         <div className="col-sm" style={colStyle}>
           <h3>
             <strong>FAQS</strong>
@@ -71,4 +72,4 @@ function Banner2() {
   );
 }
 
-export default Banner2;
+export default Banner3;

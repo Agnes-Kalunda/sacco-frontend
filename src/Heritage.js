@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import handshake from "./assets/handshake.jpg";
 import "./App.css";
 import image3 from "./assets/image3.jpeg";
+import Banner3 from "./Banner3";
 const squareButtonStyle = {
   width: "50%",
   height: "50px",
@@ -190,6 +191,7 @@ function Heritage() {
             </p>
           </div>
         </Col>
+        
       </Row>
     </Container>
   );

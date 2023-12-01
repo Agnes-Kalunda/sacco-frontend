@@ -32,192 +32,264 @@ import Image24 from "./assets/gallery24.jpg";
 function Gallery() {
   return (
     <Container style={{ paddingTop: "25px", marginBottom: "30px" }}>
-      <h2 className="service" style={{ marginBottom: "25px" }}>
-        <strong>Our gallery</strong>
+      {/* First set of images */}
+      <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:"green"}}>
+        <strong>St. Kizito Church</strong>
+       
       </h2>
+      <p>Nairobi Branch Manager with kids in St.Kizito, after marketting the Sacco.</p>
       <Row xs={1} md={2} lg={3} className="g-4">
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image1}
-            alt="Image 1"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image2}
-            alt="Image 2"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image3}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image4}
-            alt="Image 1"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image5}
-            alt="Image 2"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image6}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image7}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image8}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image9}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image10}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image11}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image12}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image13}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image14}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image15}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image16}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image17}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
+        {/* Images for the first set */}
+        {/* ... (your image components) */}
         <Col className="d-flex justify-content-center align-items-center">
           <img
             src={Image18}
-            alt="Image 3"
+            alt="Image 18"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
         </Col>
+
         <Col className="d-flex justify-content-center align-items-center">
           <img
-            src={Image19}
-            alt="Image 3"
+            src={Image15}
+            alt="Image 15"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
         </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image20}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image21}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image22}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <img
-            src={Image23}
-            alt="Image 3"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-          />
-        </Col>
+        {/* ... (additional image components for Set 1) */}
+      </Row>
+
+      {/* Second set of images */}
+      <h2 className="service" style={{ marginBottom: "15px" , paddingTop:"7%", color:"green"}}>
+        <strong>Nairobi Board Meeting</strong>
+      
+      </h2>
+      <p>Board meeting based in Nairobi, during the Sacco software presentation</p>
+      <Row xs={1} md={2} lg={3} className="g-4">
+        {/* Images for the second set */}
+        {/* ... (your image components) */}
         <Col className="d-flex justify-content-center align-items-center">
           <img
             src={Image24}
-            alt="Image 3"
+            alt="Image 24"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
         </Col>
+
         <Col className="d-flex justify-content-center align-items-center">
           <img
-            src={Image25}
-            alt="Image 3"
+            src={Image1}
+            alt="Image 24"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
         </Col>
+
+
         <Col className="d-flex justify-content-center align-items-center">
           <img
-            src={Image26}
-            alt="Image 3"
+            src={Image2}
+            alt="Image 24"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
         </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image3}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image4}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image5}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image6}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image7}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image8}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image9}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image10}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image11}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image12}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image13}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image14}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image16}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image17}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image19}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image20}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image21}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image22}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image23}
+            alt="Image 24"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+
+
+
+       
+        
+        {/* ... (additional image components for Set 2) */}
       </Row>
     </Container>
   );

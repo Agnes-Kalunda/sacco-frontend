@@ -92,6 +92,15 @@
 	--textColor: #eee;
 }
 
+
+
+/* Add this to your CSS or SCSS file */
+.card-hover:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 header {
 	display: flex;
 	align-items: center;
@@ -279,6 +288,13 @@ nav {
 .services{
   background-color: white;
 }
+
+
+/* Add this to your CSS or SCSS file */
+.services:hover {
+  background-color: #f4f4f4; /* Change this to your desired hover background color */
+}
+
 
 /* workwithus section */
 body{margin-top:20px;}

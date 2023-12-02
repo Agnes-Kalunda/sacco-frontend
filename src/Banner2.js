@@ -8,6 +8,7 @@ function Banner2() {
     margin: "auto",
     border: "1px solid",
     padding: "40px",
+    marginBottom:"5%",
     backgroundImage: "linear-gradient(to right, #009900, #00FF00)",
   };
 

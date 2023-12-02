@@ -40,7 +40,7 @@ function Services() {
     {
       id: 5,
       title: "BOSA Shares Account",
-      text: "A tailor-made account for long-term savings with attractive dividents.",
+      text: "A tailor-made account for long-term savings with attractive dividends.",
       icon: faChartLine,
     },
     {
@@ -65,7 +65,7 @@ function Services() {
                 <FontAwesomeIcon
                   icon={card.icon}
                   size="3x"
-                  style={{ margin: "20px auto", color: "#2E8B57" }}
+                  className="icon" // Add a class for styling
                 />
                 <Card.Body>
                   <Card.Title>

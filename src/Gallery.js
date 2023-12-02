@@ -31,7 +31,11 @@ import Image24 from "./assets/gallery24.jpg";
 
 function Gallery() {
   return (
-    <Container style={{ paddingTop: "25px", marginBottom: "30px" }}>
+
+    <div className="Gallery1">
+
+
+<Container style={{ paddingTop: "25px", marginBottom: "30px" }}>
       {/* First set of images */}
       <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:"green"}}>
         <strong>St. Kizito Church</strong>
@@ -292,6 +296,12 @@ function Gallery() {
         {/* ... (additional image components for Set 2) */}
       </Row>
     </Container>
+
+
+
+
+    </div>
+   
   );
 }
 

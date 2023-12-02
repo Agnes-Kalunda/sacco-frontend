@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Banner2() {
   const containerStyle = {
@@ -18,19 +19,19 @@ function Banner2() {
     gap: "5px",
     color: "black",
     paddingTop: "5%",
-    borderLeft: "5px solid green", // Green border on the left side
-    paddingLeft: "20px", // Adjusted padding to fit h3 and small texts
+    borderLeft: "5px solid green",
+    paddingLeft: "20px",
   };
 
   const linkStyle = {
-    color: "black", // Set link color to black
-    textDecoration: "none", // Remove underline
-    transition: "color 0.3s", // Add transition for smooth color change
+    color: "black",
+    textDecoration: "none",
+    transition: "color 0.3s",
   };
 
   // Add blue hover effect
   linkStyle[':hover'] = {
-    color: "blue", // Set color to blue on hover
+    color: "blue",
   };
 
   return (
@@ -41,9 +42,9 @@ function Banner2() {
             <strong>FAQS</strong>
           </h3>
           <small>
-            <a href="#faq-link" style={linkStyle}>
+            <Link to="/resources/faqs" style={linkStyle}>
               LEARN MORE
-            </a>
+            </Link>
           </small>
         </div>
         <div className="col-sm" style={colStyle}>
@@ -51,9 +52,9 @@ function Banner2() {
             <strong>DOWNLOADS</strong>
           </h3>
           <small>
-            <a href="#downloads-link" style={linkStyle}>
+            <Link to="/resources/downloads" style={linkStyle}>
               VIEW ALL
-            </a>
+            </Link>
           </small>
         </div>
         <div className="col-sm" style={colStyle}>
@@ -61,9 +62,9 @@ function Banner2() {
             <strong>OUR HERITAGE</strong>
           </h3>
           <small>
-            <a href="#heritage-link" style={linkStyle}>
+            <Link to="/about-us/our-heritage" style={linkStyle}>
               LEARN MORE
-            </a>
+            </Link>
           </small>
         </div>
       </div>

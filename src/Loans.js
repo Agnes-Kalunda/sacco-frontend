@@ -198,57 +198,112 @@ on the assessment by Unity.</li>
           <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
             <Col>
               <Link to="/join/loan-products">
-                <Button
-                  variant="primary"
-                  size="lg"
-      
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  LOAN PRODUCTS
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Loan Products
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/loan-products">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  TAMREP
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  TAMREP
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/loan-products">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  SIDGROW 
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  SIDGROW
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/loan-products">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  RAF 
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  RAF
+</Button>
+
               </Link>
             </Col>
           </Row>
@@ -257,14 +312,28 @@ on the assessment by Unity.</li>
           <Row className="mb-3">
             <Col>
               <Link to="/join/loan-products">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  SGL 
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  SGL
+</Button>
+
               </Link>
             </Col>
           </Row>
@@ -277,7 +346,7 @@ on the assessment by Unity.</li>
           <div
             style={{
               marginTop: "20px",
-              backgroundColor: "#f8f9fa",
+              backgroundColor: "whitesmoke",
               padding: "10px",
               borderRadius: "5px",
             }}

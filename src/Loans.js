@@ -1,11 +1,32 @@
 import React, { useState } from "react";
 import { MDBAccordion, MDBAccordionItem, MDBContainer } from "mdb-react-ui-kit";
 import Banner3 from './Banner2';
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Banner2 from "./Banner2";
+
+
+
+
+const squareButtonStyle = {
+  width: "50%",
+  height: "50px",
+  marginTop: "1%",
+  borderRadius: "0",
+  background: "blue",
+  transition: "transform 0.3s ease",
+  };  
+
+
+
 
 const CustomAccordionItem = ({ collapseId, headerTitle, children, isOpen, onToggle }) => {
   const toggleAccordion = () => {
     onToggle(collapseId);
   };
+
+
+
 
   return (
     <div className={`blue-box ${isOpen ? "open" : ""}`} style={{ marginBottom: "10px" }}>
@@ -40,9 +61,19 @@ function Loans() {
 
   return (
     <div>
+     
+
+<div className="d-md-flex"> 
+
+
+
+     
+
+      <div className="   col-md-8 order-md-1 order-2">
       <h2 className="service" style={{ marginTop: "4%", color: "#0096FF" }}>
         <strong>Loans</strong>
       </h2>
+
       <MDBContainer
         className="mt-5"
         style={{ maxWidth: "600px", marginBottom: "10%" }} // Adjust the width here
@@ -100,7 +131,7 @@ interventions that improve students’ learning outcomes without disruptions.
             onToggle={handleAccordionToggle}
           >
             <p>This is meant to promote active membership through offering new members
-incentives to access credit before the six months of membership period is over..</p>
+incentives to access credit before the six months of membership period is over.</p>
 
           
 
@@ -113,9 +144,9 @@ incentives to access credit before the six months of membership period is over..
 
 
           <CustomAccordionItem
-            collapseId={3}
+            collapseId={4}
             headerTitle={<strong>UTU BORA LENDING(UBL)</strong>}
-            isOpen={openAccordionId === 3}
+            isOpen={openAccordionId === 4}
             onToggle={handleAccordionToggle}
           >
             <p>This loan product is designed to promote togetherness and communal consciousness/</p>
@@ -155,8 +186,124 @@ on the assessment by Unity.</li>
         </MDBAccordion>
 
       </MDBContainer>
-      <Banner3/>
+      
+
+
+
+      </div>
+     
+      <Col md={4} style={{ marginLeft:"20px"}} className="order-md-2 order-1 ">
+          {/* Content for the second column with 5 small rows as styled buttons */}
+          <h3></h3>
+          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
+            <Col>
+              <Link to="/join/loan-products">
+                <Button
+                  variant="primary"
+                  size="lg"
+      
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  LOAN PRODUCTS
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/loan-products">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  TAMREP
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/loan-products">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  SIDGROW 
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/loan-products">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  RAF 
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          
+
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/loan-products">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  SGL 
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
+            {/* <small>
+              Do not hesitate to reach out if you have inquiries regarding our
+              loan services.
+            </small> */}
+          </h4>
+          <div
+            style={{
+              marginTop: "20px",
+              backgroundColor: "#f8f9fa",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              Unity SACCO Building, 123 Street, Cityville, Country
+            </p>
+            <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
+              <strong>Contact Information</strong>
+            </h4>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              Phone: +123 456 7890
+              <br />
+              Email: info@unitysacco.com
+            </p>
+          </div>
+        </Col>
+
+
     </div>
+
+<Banner2/>
+    </div>
+    
+    
   );
 }
 

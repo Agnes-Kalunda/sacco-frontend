@@ -23,7 +23,9 @@ function Footer() {
               <strong>ABOUT US</strong>
             </h6>
             <p className="hover-black">
-              <small>Our vision and Mission</small>
+              <small>
+                Our Vision and Mission
+              </small>
             </p>
             <p className="hover-black">
               <small>Unity Sacco Heritage</small>

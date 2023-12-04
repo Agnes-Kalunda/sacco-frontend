@@ -28,8 +28,16 @@ function Banner() {
           />
           <Carousel.Caption>
             <h3>Why Unity Sacco ?</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <button className="btn btn-primary">Learn More</button>
+            {/* <div style={{display:"flex", marginLeft:"36%"}}>
+            <p style={{color:"#0096FF"}}> PROSPERITY. </p> 
+            <p style={{color:"orange"}}> RESILIENCE. </p>
+            <p style={{color: "green"}}>INSURANCE</p>
+            </div> */}
+               
+           
+            <a href="/about-us/our-heritage" className="btn btn-primary">
+                Learn More
+              </a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -41,8 +49,12 @@ function Banner() {
           />
           <Carousel.Caption>
             <h3>Save with us today.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button className="btn btn-primary">Explore Savings</button>
+            <p>We make about your financial freedom.</p>
+
+            <a href="/join/save-with-us" className="btn btn-primary">
+                Explore Savings
+              </a>
+
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -55,9 +67,11 @@ function Banner() {
           <Carousel.Caption>
             <h3>Borrow from us.</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              We care about you hitting your financial goals.
             </p>
-            <button className="btn btn-primary">Explore Loans</button>
+            <a href="/join/borrow-from-us" className="btn btn-primary">
+                Explore Loans
+              </a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -70,9 +84,11 @@ function Banner() {
           <Carousel.Caption>
             <h3>We keep you informed</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              At Unity Sacco we keep you upto date on our latest developments.
             </p>
-            <button className="btn btn-primary">Explore Resources</button>
+            <a href="/resources/faqs" className="btn btn-primary">
+                Be informed
+              </a>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

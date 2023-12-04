@@ -20,6 +20,7 @@ import Policies from "./Policies";
 import Register from "./Register";
 import Savings from "./Savings";
 import Socials from "./Socials";
+import LoanProducts from './LoanProducts';
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
             <Route path="save-with-us" element={<Savings />} />
             <Route path="borrow-from-us" element={<Loans />} />
             <Route path="loan-eligibility" element={<LoanEligibility />} />
+            <Route path="loan-products" element={<LoanProducts />} />
+            
           </Route>
 
           <Route path="/resources" >

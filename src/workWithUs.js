@@ -9,10 +9,10 @@ function WorkWithUs() {
         className="container"
         style={{ paddingTop: "20px", paddingBottom: "20px" }}
       >
-        <div className="text-center mb-2-8 mb-lg-6">
-          <h2 className="service display-18 display-md-16 display-lg-14 font-weight-700">
-            <strong>Why choose us</strong>
-          </h2>
+        <div className="text-center mb-2-8 mb-lg-6 ">
+        <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
+          <strong>Why Choose us</strong>
+        </h2>
           <hr style={{ marginBottom: "20px" }} />
         </div>
         <div className="row align-items-center">

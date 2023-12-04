@@ -54,7 +54,7 @@ function Services() {
   return (
     <div className="services">
       <Container className="p-4">
-        <h2 className="service" style={{ marginBottom: "10px" }}>
+        <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
           <strong>Our Services</strong>
         </h2>
         <hr style={{ marginBottom: "20px" }} />
@@ -68,12 +68,14 @@ function Services() {
                   className="icon" // Add a class for styling
                 />
                 <Card.Body>
-                  <Card.Title>
+                  <Card.Title className="card-title">
                     <strong>{card.title}</strong>
                   </Card.Title>
 
-                  <Card.Text>{card.text}</Card.Text>
-                  <Button variant="primary">Read More</Button>
+                  <Card.Text className="card-text">{card.text}</Card.Text>
+                  <a href="/join/borrow-from-us" className="btn btn-primary">
+                Read More
+              </a>
                 </Card.Body>
               </Card>
             </Col>

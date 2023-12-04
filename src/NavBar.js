@@ -42,6 +42,10 @@ const navBarData = [
         url: "borrow-from-us",
       },
       {
+        label: "Loan Products",
+        url: "loan-products",
+      },
+      {
         label: "Loan eligibility",
         url: "loan-eligibility",
       },
@@ -86,6 +90,7 @@ const navBarData = [
     url: "/contact-us",
   },
 ];
+// ... (import statements)
 
 function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
@@ -95,20 +100,19 @@ function NavBar() {
   };
 
   const dropdownItemStyle = {
-    color: "black", // Set color to black for dropdown items
+    color: "black",
   };
 
-  const specialItems = ["HOME", "CAREERS", "CONTACT US"]; // Update this array with the labels you want to be white
+  const specialItems = ["HOME", "CAREERS", "CONTACT US"];
 
   const menuShow = (mItems, parentPath = "") => {
-  const handleDropdownItemClick = () => {
-  setNavbarExpanded(false); // Close the navbar when a dropdown item is clicked
-};
+    const handleDropdownItemClick = () => {
+      setNavbarExpanded(false);
+    };
 
-  
     return mItems.map((item, index) => {
       const fullPath = `${parentPath}${item.url}`;
-  
+
       if (item.submenu) {
         return (
           <NavDropdown
@@ -130,7 +134,7 @@ function NavBar() {
             key={index}
             className={`nav-item${isSpecialMenuItem ? " special-menu-item" : ""}`}
             style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}
-            onClick={handleDropdownItemClick} // Close navbar on dropdown item click
+            onClick={handleDropdownItemClick}
           >
             {item.label}
           </Nav.Link>
@@ -151,28 +155,32 @@ function NavBar() {
           justifyContent: "space-between",
           padding: "10px",
           width: "100%",
-        }}>
+        }}
+      >
         <Navbar.Brand as={Link} to="/" role="menuitem">
           {/* Uncomment and customize the logo */}
           {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}
         </Navbar.Brand>
-        <Button variant="btn btn-primary" style={{ color: "white" }}>
+        <Button variant="success" style={{ color: "white" }}>
           Member Login
         </Button>
       </div>
-      <div className="d-flex ">
+      <div className="d-flex sticky-top">
+        {/* Add the "sticky-top" class here */}
         <Navbar
-          className="container-fluid "
+          className="container-fluid"
           bg="#2E8B57"
           expand="lg"
           variant=""
-
           role="navigation"
           expanded={navbarExpanded}
-          onToggle={handleNavbarToggle}>
+          onToggle={handleNavbarToggle}
+        >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto container-fluid flex justify-content-center">{menuShow(navBarData)}</Nav>
+            <Nav className="mr-auto container-fluid flex justify-content-center">
+              {menuShow(navBarData)}
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

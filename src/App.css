@@ -57,15 +57,15 @@
 }
 
 .nav-item{
-  color: #00a859;
+  color: black;
 }
 
 .nav-item:hover {
-  color:  #FFAC1C !important;
+  color:  black !important;
 }
 
-.nav-item .nav-link:hover {
-  color: #FFAC1C !important;
+.nav-link:hover {
+  color:  black !important;
 }
 
 .nav-item .nav-link{
@@ -73,8 +73,17 @@
 }
 
 .navbackground{
-  background-color:#2E8B57;
+  background-color: #0096FF;
 }
+
+
+.icon {
+  color: #0096FF; 
+  padding-top: 3%;
+}
+
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
@@ -175,9 +184,7 @@ nav {
 	}
 }
 
-/* .custom-dropdown {
-  background-color: green;
-} */
+
 .banner {
   background-image: url('./assets/background.jpeg');
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -269,7 +276,7 @@ nav {
   position: relative;
   display: inline-block;
   font-weight: normal;
-  /* color: green; */
+  /* color: #0096FF; */
 }
 
 .service::after {
@@ -277,7 +284,7 @@ nav {
   position: absolute;
   width: 50%; /* Adjust the width of the line */
   height: 2px; /* Adjust the thickness of the line */
-  background-color: #FFAC1C; /* Set the color of the line */
+  background-color: black; /* Set the color of the line */
   bottom: 0;
   left: 25%; /* Adjust the position of the line */
   margin-top: 5px; /* Adjust the space between the line and text */
@@ -310,7 +317,7 @@ img {
 .sub-info{
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    color: green;
+    color: #0096FF;
 }
 
 .display-30 {
@@ -344,7 +351,7 @@ img {
 
 
 .hover-black:hover {
-  color: #FFAC1C;
+  color: black;
 }
 
 .employee-grid {
@@ -371,7 +378,7 @@ h2 {
 }
 
 .position p {
-  color: #00a859; /* Green color */
+  color: #0096FF; 
   margin-top: 5px;
 }
 
@@ -394,7 +401,7 @@ h2 {
 
 
 .fa-icon {
-  color: green;
+  color: #0096FF;
 }
 .text {
   font-size: 20px;
@@ -484,7 +491,7 @@ h2 {
 
 
 .bg-green {
-  background-color: #2e8b57;
+  background-color: #0096FF;
 }
 
 
@@ -544,140 +551,173 @@ h2 {
 
 
 
-.services {
-  background-color: #f8f9fa;
+
+
+
+
+
+.quote-section {
+  position: relative;
 }
 
-.service {
-  color: #2E8B57;
-  font-size: 24px;
-  font-weight: 600;
+.quote-section::before {
+  content: '\201C'; /* Unicode character for left double quotation mark */
+  position: absolute;
+  top: 0;
+  left: -20px; /* Adjust the distance as needed */
+  font-size: 3rem; /* Adjust the size as needed */
+  color: #0096FF; /* Adjust the color as needed */
 }
 
-.card-overlay {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your CSS or SCSS file */
+.card:hover {
+  background-color: #0096FF; /* Background color on hover */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.card:hover .icon {
+  color: white; /* Color of icons on hover */
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: white; /* Color of text on hover */
+}
+
+.card:hover .read-more-btn {
+  background-color: #2e8b57; /* Green button background color on hover */
+  border-color: #2e8b57; /* Green button border color on hover */
+  color: white; /* Text color of button on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.overlay-card {
-  position: relative;
-  overflow: hidden;
+.image-card:hover .overlay {
+  opacity: 1;
 }
 
-.overlay {
+.image-card .icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 128, 0, 0);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container{
-  max-width: 1177px;
-}
-.card{
-  background-color: #f2f1f1;
-  border-radius: 1.2rem;
-  color: black;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-.card:hover{
-  background-color: green;
-  color: #fff;
-}
-.bi{
-  font-size: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

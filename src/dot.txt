@@ -1,104 +1,205 @@
-import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import bosa from "./assets/bosa.jpeg";
-import chama from "./assets/chama.jpeg";
-import { Outlet } from "react-router-dom";
 
-function AboutUs() {
-  // Function to scroll to the "Office Location" section when the button is clicked
-  const scrollToOfficeLocation = () => {
-    const officeLocationSection = document.getElementById(
-      "officeLocationSection",
-    );
-    if (officeLocationSection) {
-      officeLocationSection.scrollIntoView({ behavior: "smooth" });
-    }
+
+import React from "react";
+import "./App.css";
+import image3 from "./assets/image3.jpeg";
+import {
+  faMobileAlt,
+  faBook,
+  faHandshake,
+  faMoneyBillWave,
+  faChartLine,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
+
+const Savings = () => {
+  let schemeCounter = 0; // Counter variable to number schemes
+
+  const incrementCounter = () => {
+    schemeCounter += 1;
+    return schemeCounter;
   };
 
   return (
-    <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
-      <Row>
-        <Col md={6}>
-          <h2 className="service" style={{ marginBottom: "10px" }}>
-            <strong>Our Mission</strong>
-          </h2>
-          <p>
-            We aim to boost savings, resilience, and financial inclusivity,
-            particularly among underserved communities. Our mission is to
-            empower individuals impacted by crises, helping them utilize
-            resources collectively for improved living standards.
-          </p>
-        </Col>
-        <Col md={6}>
-          <img src={bosa} alt="Image Alt Text" className="img-fluid" />
-        </Col>
-      </Row>
-      <Row>
-        <Col md={6}>
-          <img src={chama} alt="Image Alt Text" className="img-fluid" />
-        </Col>
-        <Col md={6} style={{ paddingTop: "20px" }}>
-          <h2 className="service" style={{ marginBottom: "10px" }}>
-            <strong>Our Vision</strong>
-          </h2>
-          <p>
-            We envision accessible, sustainable credit and financial
-            empowerment. Through education and training, we equip members with
-            essential skills. Our commitment is to provide efficient,
-            disaster-resistant services, ensuring member satisfaction.
-          </p>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={12}>
-          <h2 className="service" style={{ marginBottom: "10px" }}>
-            <strong>Our Focus</strong>
-          </h2>
-          <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-            <li>
-              &#8226; Mobilizing savings, resilience-building, and financial
-              inclusivity among people and communities, particularly those at
-              the bottom of the pyramid.
-            </li>
-            <li>
-              &#8226; Lifting people from the effects of multiple crises that
-              have disrupted their livelihoods, mobilizing them to collectively
-              utilize their resources, thus improving the living standards of
-              the members.
-            </li>
-            <li>
-              &#8226; Provision of demonstrably affordable and sustainable
-              credit and giving.
-            </li>
-            <li>
-              &#8226; Training and education to our members on financial
-              literacy.
-            </li>
-            <li>
-              &#8226; Providing members with efficient, disaster risk-free, and
-              effective services to assure satisfaction.
-            </li>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
-  
+    <div>
+      <div>
+        <h1 style={{ color: "green", paddingTop: "7%" }}>
+          Unity Sacco Saving Schemes
+        </h1>
+        <p>
+          <small>🌟 Discover the Unity Sacco Advantage! 🌟</small>
+        </p>
+        <p>
+          At Unity Sacco, we believe in the power of savings to transform lives.
+          Choose our tailor-made savings plans to invest in your future.
+        </p>
+      </div>
+      <div className="wrapper">
+        <div>
+          <div className="text-box">
+            <h4 className="service">
+              <strong>Jikakamue Savings</strong>
+            </h4>
+            <p>
+              This allows members to regularly save money for a specific purpose
+              in the future. It is aimed at helping them achieve a specific goal
+              that requires a considerable amount of money, without necessarily
+              taking up loans
+            </p>
+            <p></p>
+            <p></p>
+            <p>
+              <strong>Features Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>
+                Deposits are withdrawable but after a certain fixed period of
+                time              
+              </li>
+            </ul>
+            <p>
+              <strong>Benefits Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>Such deposits will earn an interest on annual basis</li>
+              <li>Can be used as additional collateral for loans</li>
+            </ul>
+            <button className="learn-more-button blue-button">
+              Start Saving
+            </button>
+          </div>
+        </div>
+        <div style={{ paddingTop: "7%" }}>
+          <div className="text-box">
+            <h4 className="service">
+              <strong>Daily/ Weekly BOSA Deposits</strong>
+            </h4>
+            <p>
+              This is a daily savings activity that allows one to save regularly
+              from the remnants of his/her daily/weekly expenditure.
+            </p>
+
+            <p>
+              <strong>Features Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>
+                Can be contributed through Unity Sacco Mobile Money transfer
+                channels
+              </li>
+              <li>
+                The daily deposits trend can be used to appraise members for
+                loans
+              </li>
+            </ul>
+            <p>
+              <strong>Benefits Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>Stress-free way of accumulating your deposits</li>
+              <li>Access to loan facilities</li>
+            </ul>
+            <button className="learn-more-button blue-button">
+              Start Saving
+            </button>
+          </div>
+        </div>
+        <div style={{ paddingTop: "7%" }}>
+          <div className="text-box">
+            <h4 className="service">
+              <strong>Daily/ Weekly BOSA Deposits</strong>
+            </h4>
+            <p>
+              These are the continuous monthly savings that members make to the
+              Sacco throughout their membership..
+            </p>
+
+            <p>Minimum Monthly Contributions </p>
+            <ul className="feature-list">
+              <li>Individuals: Kes. 1,000/=</li>
+              <li>Groups: Kes. 5,000/=</li>
+              <li>Corporates: Kes 10,000/=</li>
+            </ul>
+
+            <p>
+              <strong>Features Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>Allows members to access deposit-based loans</li>
+              <li>
+                Can be contributed through standing order, check-off from salary
+                or produce proceeds, Mobile Banking, Bank transfers or direct
+                deposit at the Bank.
+              </li>
+              <li>The Handshake Savings earn interest annually</li>
+              <li>
+                Annual interest earned shall be automatically capitalized for
+                any member holding less than the Minimum Share Capital
+              </li>
+              <li>TCan only be refunded upon membership withdrawal see</li>
+            </ul>
+            <p>
+              <strong>Benefits Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>Access to Loan facilities</li>
+              <li>Guarantee loans</li>
+              <li>Earn interest/rebates annually</li>
+            </ul>
+            <button className="learn-more-button blue-button">
+              Start Saving
+            </button>
+          </div>
+        </div>
+        <div style={{ paddingTop: "7%" }}>
+          <div className="text-box">
+            <h4 className="service">
+              <strong>BOSA Shares Account</strong>
+            </h4>
+
+            <p>Minimum Monthly Contributions </p>
+            <ul className="feature-list">
+              <li>Individuals: Kes. 20,000/=</li>
+              <li>Groups: Kes. 25,000/=</li>
+              <li>Corporates: Kes 50,000/=</li>
+            </ul>
+
+            <p>
+              <strong>Features Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>
+                A tailor-made account for long-term saving with attractive
+                dividends.
+              </li>
+              <li>
+                The shares are non-refundable but can be transferred to an
+                existing Sacco member.
+              </li>
+              <li>
+                Each member needs to have share capital depending on their
+                category.
+              </li>
+              <li>A member may purchase shares by installment.</li>
+            </ul>
+            <p>
+              <strong>Benefits Include:</strong>
+            </p>
+            <ul className="feature-list">
+              <li>Dividends earnings</li>
+              <li>
+                Dividends shall be automatically capitalized for any member
+                holding less than the Minimum Share Capital.
+              </li>
+            </ul>
+            <button className="learn-more-button blue-button">
+              Start Saving
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
-export default AboutUs;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Savings;

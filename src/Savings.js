@@ -229,56 +229,112 @@ holding less than the Minimum Share Capital</li>
           <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
             <Col>
               <Link to="/join/borrow-from-us">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  Education Loan
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Education Loan
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/borrow-from-us">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  Utu Bora
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Utu Bora
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/borrow-from-us">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  Mobile Loan
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Utu Bora
+</Button>
+
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
               <Link to="/join/borrow-from-us">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={squareButtonStyle}
-                  className="btn-hover"
-                >
-                  Karibu Loan
-                </Button>
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Karibu Loan
+</Button>
+
               </Link>
             </Col>
           </Row>

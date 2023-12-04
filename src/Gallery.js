@@ -28,7 +28,7 @@ import Image22 from "./assets/gallery22.jpg";
 import Image23 from "./assets/gallery23.jpg";
 import Image25 from "./assets/gallery25.jpg";
 import Image24 from "./assets/gallery24.jpg";
-
+import Image30 from './assets/gallery30.jpg';
 function Gallery() {
   return (
 
@@ -295,6 +295,28 @@ function Gallery() {
         
         {/* ... (additional image components for Set 2) */}
       </Row>
+
+
+       {/* First set of images */}
+       <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:" #0096FF"}}>
+        <strong>Ol Kario Visit</strong>
+       
+      </h2>
+      <p>Unity Sacco Team visit and meeting with farmers in Ol Kario.</p>
+      <Row xs={1} md={2} lg={3} className="g-4">
+    
+        
+
+        <Col className="d-flex justify-content-center align-items-center">
+          <img
+            src={Image30}
+            alt="Image 30"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </Col>
+       
+      </Row>
+
     </Container>
 
 

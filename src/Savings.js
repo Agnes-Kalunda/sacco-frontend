@@ -1,11 +1,32 @@
 import React, { useState } from "react";
 import { MDBAccordion, MDBAccordionItem, MDBContainer } from "mdb-react-ui-kit";
 import Banner3 from './Banner2';
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Banner2 from "./Banner2";
+
+
+
+
+const squareButtonStyle = {
+  width: "50%",
+  height: "50px",
+  marginTop: "1%",
+  borderRadius: "0",
+  background: "blue",
+  transition: "transform 0.3s ease",
+  };  
+
+
+
 
 const CustomAccordionItem = ({ collapseId, headerTitle, children, isOpen, onToggle }) => {
   const toggleAccordion = () => {
     onToggle(collapseId);
   };
+
+
+
 
   return (
     <div className={`blue-box ${isOpen ? "open" : ""}`} style={{ marginBottom: "10px" }}>
@@ -31,7 +52,7 @@ const CustomAccordionItem = ({ collapseId, headerTitle, children, isOpen, onTogg
   );
 };
 
-function Savings() {
+function Loans() {
   const [openAccordionId, setOpenAccordionId] = useState(1);
 
   const handleAccordionToggle = (collapseId) => {
@@ -40,9 +61,19 @@ function Savings() {
 
   return (
     <div>
+     
+
+<div className="d-md-flex"> 
+
+
+
+     
+
+      <div className="   col-md-8 order-md-1 order-2">
       <h2 className="service" style={{ marginTop: "4%", color: "#0096FF" }}>
         <strong>Savings</strong>
       </h2>
+
       <MDBContainer
         className="mt-5"
         style={{ maxWidth: "600px", marginBottom: "10%" }} // Adjust the width here
@@ -50,11 +81,11 @@ function Savings() {
         <MDBAccordion alwaysOpen initialActive={openAccordionId}>
           <CustomAccordionItem
             collapseId={1}
-            headerTitle={<strong>Jikakamue Savings</strong>}
+            headerTitle={<strong>JIKAKAMUE SAVINGS</strong>}
             isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
           >
-            <p>
+           <p>
               This allows members to regularly save money for a specific purpose
               in the future. It is aimed at helping them achieve a specific goal
               that requires a considerable amount of money, without necessarily
@@ -74,12 +105,16 @@ function Savings() {
             </button>
           </CustomAccordionItem>
 
+
+
+
           <CustomAccordionItem
             collapseId={2}
             headerTitle={<strong>Daily/ Weekly BOSA Deposits</strong>}
             isOpen={openAccordionId === 2}
             onToggle={handleAccordionToggle}
           >
+            
             <p>
               This is a daily savings activity that allows one to save regularly
               from the remnants of his/her daily/weekly expenditure.
@@ -102,15 +137,16 @@ function Savings() {
             </button>
           </CustomAccordionItem>
 
+
+
+
           <CustomAccordionItem
             collapseId={3}
-            headerTitle={<strong>BOSA Shares Account</strong>}
+            headerTitle={<strong>BOSA SHARES ACCOUNT</strong>}
             isOpen={openAccordionId === 3}
             onToggle={handleAccordionToggle}
           >
-          
-
-            <p><strong>Minimum Monthly Contributions </strong></p>
+           <p><strong>Minimum Monthly Contributions </strong></p>
             <ol>
               <li>Individuals: Kes. 20,000/=</li>
               <li>Groups: Kes. 25,000/=</li>
@@ -140,12 +176,12 @@ function Savings() {
 
 
           <CustomAccordionItem
-            collapseId={3}
-            headerTitle={<strong>The Handshake Deposits Savings</strong>}
-            isOpen={openAccordionId === 3}
+            collapseId={4}
+            headerTitle={<strong>THE HANDSHAKE DEPOSITS SAVINGS</strong>}
+            isOpen={openAccordionId === 4}
             onToggle={handleAccordionToggle}
           >
-            <p>These are the continuous monthly savings that members make to the Sacco
+           <p>These are the continuous monthly savings that members make to the Sacco
 throughout their membership.</p>
 
             <p><strong>Minimum Monthly Contributions </strong></p>
@@ -181,9 +217,111 @@ holding less than the Minimum Share Capital</li>
         </MDBAccordion>
 
       </MDBContainer>
-      <Banner3/>
+      
+
+
+
+      </div>
+     
+      <Col md={4} style={{ marginLeft:"20px"}} className="order-md-2 order-1 ">
+          {/* Content for the second column with 5 small rows as styled buttons */}
+          <h3></h3>
+          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
+            <Col>
+              <Link to="/join/borrow-from-us">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  Education Loan
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  Utu Bora
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  Mobile Loan
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  style={squareButtonStyle}
+                  className="btn-hover"
+                >
+                  Karibu Loan
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          
+          <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
+            {/* <small>
+              Do not hesitate to reach out if you have inquiries regarding our
+              loan services.
+            </small> */}
+          </h4>
+          <div
+            style={{
+              marginTop: "20px",
+              backgroundColor: "#f8f9fa",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              Unity SACCO Building, 123 Street, Cityville, Country
+            </p>
+            <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
+              <strong>Contact Information</strong>
+            </h4>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              Phone: +123 456 7890
+              <br />
+              Email: info@unitysacco.com
+            </p>
+          </div>
+        </Col>
+
+
     </div>
+<div style={{paddingTop:"5%"}}>
+<Banner2/>
+</div>
+
+    </div>
+    
+    
   );
 }
 
-export default Savings;
+export default Loans;

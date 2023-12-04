@@ -160,7 +160,7 @@ function Heritage() {
               </Link>
             </Col>
           </Row>
-          <h5>Our Location</h5>
+         
           <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
             {/* <small>
               Do not hesitate to reach out if you have inquiries regarding our

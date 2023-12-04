@@ -6,11 +6,10 @@ import "./App.css";
 import image3 from "./assets/image3.jpeg";
 import Banner4 from "./Banner4";
 
-
 const squareButtonStyle = {
   width: "100%",
   height: "50px",
-  marginTop:"1%",
+  marginTop: "1%",
   borderRadius: "0",
   background: "blue",
   transition: "transform 0.3s ease",
@@ -20,7 +19,6 @@ const squareButtonHoverStyle = {
   background: "black",
   transform: "scale(0.9)",
 };
-
 
 const containerStyle = {
   paddingTop: "20px",
@@ -32,7 +30,7 @@ function Heritage() {
       <Row>
         <Col md={4}>
           {/* Content for the first column with the provided text */}
-          <h2 className="service" style={{ marginBottom: "10px", color :"#0096FF" }}>
+          <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
             <strong>Our Heritage</strong>
           </h2>
           <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
@@ -81,10 +79,7 @@ function Heritage() {
 
         <Col md={4}>
           {/* Content for the third column with an image at the top */}
-          <h2
-            className="service"
-            style={{ marginBottom: "10px", marginTop: "50px" }}
-          >
+          <h2 className="service" style={{ marginBottom: "10px", marginTop: "50px" }}>
             <strong></strong>
           </h2>
           <img
@@ -109,28 +104,24 @@ function Heritage() {
         <Col md={4}>
           {/* Content for the second column with 5 small rows as styled buttons */}
           <h3></h3>
-          <Row
-            className="mb-3"
-            style={{ textDecoration: "underline", fontWeight: "bold" }}
-          >
+          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
             <Col>
-              <Link to="/section1">
-              <Button
+              <Link to="/join/borrow-from-us">
+                <Button
                   variant="primary"
                   size="lg"
                   style={squareButtonStyle}
-                  className="btn-hover "
+                  className="btn-hover"
                 >
                   Education Loan
                 </Button>
-
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/section2">
-              <Button
+              <Link to="/join/borrow-from-us">
+                <Button
                   variant="primary"
                   size="lg"
                   style={squareButtonStyle}
@@ -138,13 +129,12 @@ function Heritage() {
                 >
                   Utu Bora
                 </Button>
-
               </Link>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/section3">
+              <Link to="/join/borrow-from-us">
                 <Button
                   variant="primary"
                   size="lg"
@@ -158,7 +148,7 @@ function Heritage() {
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/section4">
+              <Link to="/join/borrow-from-us">
                 <Button
                   variant="primary"
                   size="lg"
@@ -190,7 +180,7 @@ function Heritage() {
               Unity SACCO Building, 123 Street, Cityville, Country
             </p>
             <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
-             <strong>Contact Information</strong> 
+              <strong>Contact Information</strong>
             </h4>
             <p style={{ fontSize: "14px", color: "#555" }}>
               Phone: +123 456 7890
@@ -199,12 +189,10 @@ function Heritage() {
             </p>
           </div>
         </Col>
-        
       </Row>
-<div style={{marginTop:"5%"}}>
-<Banner4/>
-</div>
-     
+      <div style={{ marginTop: "5%" }}>
+        <Banner4 />
+      </div>
     </Container>
   );
 }

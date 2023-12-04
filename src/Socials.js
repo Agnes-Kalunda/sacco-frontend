@@ -5,6 +5,7 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 
 const Socials = () => {
@@ -56,11 +57,11 @@ const Socials = () => {
           <FontAwesomeIcon icon={faTwitter} size="sm" style={iconStyle} />
         </a>
         <a href="#">
-          <FontAwesomeIcon icon={faInstagram} size="sm" style={iconStyle} />
+          <FontAwesomeIcon icon={faWhatsapp} size="sm" style={iconStyle} />
         </a>
-        <a href="#">
+        {/* <a href="#">
           <FontAwesomeIcon icon={faLinkedin} size="sm" style={iconStyle} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

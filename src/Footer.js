@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
-  faInstagram,
-  faLinkedin,
+ 
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "./assets/logg.png";
 
@@ -132,14 +132,14 @@ function Footer() {
                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <a href="#" className="btn-floating btn-lg text-white">
                   <FontAwesomeIcon icon={faInstagram} size="2x" />
                 </a>
-              </li>
+              </li> */}
               <li className="list-inline-item">
                 <a href="#" className="btn-floating btn-lg text-white">
-                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  <FontAwesomeIcon icon={faWhatsapp} size="2x" />
                 </a>
               </li>
             </ul>

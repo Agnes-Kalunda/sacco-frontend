@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Banner2() {
+function Banner4() {
   const containerStyle = {
     width: "85%",
     height: "270px",
@@ -60,11 +60,11 @@ function Banner2() {
         </div>
         <div className="col-sm" style={colStyle}>
           <h3>
-            <strong>OUR HERITAGE</strong>
+            <strong>REGISTER</strong>
           </h3>
           <small>
-            <Link to="/about-us/our-heritage" style={linkStyle}>
-              LEARN MORE
+            <Link to="/join" style={linkStyle}>
+              JOIN US
             </Link>
           </small>
         </div>
@@ -73,4 +73,4 @@ function Banner2() {
   );
 }
 
-export default Banner2;
+export default Banner4;

@@ -40,7 +40,7 @@ function Services() {
     {
       id: 5,
       title: "BOSA Shares Account",
-      text: "A tailor-made account for long-term savings with attractive dividents.",
+      text: "A tailor-made account for long-term savings with attractive dividends.",
       icon: faChartLine,
     },
     {
@@ -54,7 +54,7 @@ function Services() {
   return (
     <div className="services">
       <Container className="p-4">
-        <h2 className="service" style={{ marginBottom: "10px" }}>
+        <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
           <strong>Our Services</strong>
         </h2>
         <hr style={{ marginBottom: "20px" }} />
@@ -65,15 +65,17 @@ function Services() {
                 <FontAwesomeIcon
                   icon={card.icon}
                   size="3x"
-                  style={{ margin: "20px auto", color: "#2E8B57" }}
+                  className="icon" // Add a class for styling
                 />
                 <Card.Body>
-                  <Card.Title>
+                  <Card.Title className="card-title">
                     <strong>{card.title}</strong>
                   </Card.Title>
 
-                  <Card.Text>{card.text}</Card.Text>
-                  <Button variant="primary">Read More</Button>
+                  <Card.Text className="card-text">{card.text}</Card.Text>
+                  <a href="/join/borrow-from-us" className="btn btn-primary">
+                Read More
+              </a>
                 </Card.Body>
               </Card>
             </Col>

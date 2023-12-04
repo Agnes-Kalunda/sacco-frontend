@@ -108,7 +108,7 @@ function Savings() {
             isOpen={openAccordionId === 3}
             onToggle={handleAccordionToggle}
           >
-            <p>Companies and cooperative societies must have legal status.</p>
+          
 
             <p><strong>Minimum Monthly Contributions </strong></p>
             <ol>

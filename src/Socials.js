@@ -9,13 +9,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Socials = () => {
-  const iconStyle = { color: "black", marginRight: "12px" }; // Adjust the marginRight as needed
+  const iconStyle = { color: "white", marginRight: "12px" }; // Adjust the marginRight as needed
 
   return (
     <div
       className="socials"
       style={{
-        backgroundColor: "white",
+        backgroundColor: "#0096FF",
         color: "white",
         display: "flex",
         alignItems: "center",
@@ -29,7 +29,7 @@ const Socials = () => {
       <div class="container">
   <div class="d-flex">
     <div class="p-2">
-    <h6 style={{ color: "black" }}>
+    <h6 style={{ color: "white" }}>
         <small>
           <i className="fas fa-envelope mr-3"></i> unitysacco@gmail.com
         </small>
@@ -37,7 +37,7 @@ const Socials = () => {
     </div>
     <div class="p-2">
 
-    <h6 style={{ color: "black" }}>
+    <h6 style={{ color: "white" }}>
         <small>
           <i className="fas fa-phone mr-3"></i> 07000000000
         </small>

@@ -82,9 +82,9 @@ function Loans() {
         style={{ maxWidth: "600px", marginBottom: "10%" }} // Adjust the width here
       >
         <MDBAccordion alwaysOpen initialActive={openAccordionId}>
-          <CustomAccordionItem
+          {/* <CustomAccordionItem
             collapseId={1}
-            headerTitle={<strong>JIKAKAMUE SAVINGS</strong>}
+            headerTitle={<strong>SHARES SAVINGS ACCOUNT</strong>}
             isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
           >
@@ -106,11 +106,11 @@ function Loans() {
             <button className="btn btn-success">
               Start Saving
             </button>
-          </CustomAccordionItem>
+          </CustomAccordionItem> */}
 
 
 
-
+{/* 
           <CustomAccordionItem
             collapseId={2}
             headerTitle={<strong>Daily/ Weekly BOSA Deposits</strong>}
@@ -138,38 +138,55 @@ function Loans() {
             <button className="btn btn-success">
               Start Saving
             </button>
-          </CustomAccordionItem>
+          </CustomAccordionItem> */}
 
 
 
 
           <CustomAccordionItem
-            collapseId={3}
-            headerTitle={<strong>BOSA SHARES ACCOUNT</strong>}
-            isOpen={openAccordionId === 3}
+            collapseId={1}
+            headerTitle={<strong>SHARES SAVINGS ACCOUNT</strong>}
+            isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
-          >
-           <p><strong>Minimum Monthly Contributions </strong></p>
+          > 
+
+            <p>These are the continuous monthly savings that
+members make to the Sacco throughout their
+membership.</p>
+
+<p>Savings earn interest annually and allow members
+to access deposit-based loans.</p>
+           <p><strong>Minimum Monthly Contributions: </strong></p>
             <ol>
-              <li>Individuals: Kes. 20,000/=</li>
-              <li>Groups: Kes. 25,000/=</li>
-              <li>Corporates: Kes 50,000/=</li>
+              <li>Individuals: <strong>Kes. 1,000/=</strong></li>
+              <li>Groups: <strong>Kes. 5,000/=</strong></li>
+              <li>Corporates: <strong>Kes. 10,000/=</strong></li>
             </ol>
 
-            <p><strong>Features Include:</strong></p>
+            {/* <p><strong>Features Include:</strong></p>
             <ol>
               <li>A tailor-made account for long-term saving with attractive dividends.</li>
               <li>The shares are non-refundable but can be transferred to an existing Sacco member.</li>
               <li>Each member needs to have share capital depending on their category.</li>
               <li>A member may purchase shares by installment.</li>
-            </ol>
+            </ol> */}
 
-            <p><strong>Benefits Include:</strong></p>
+            {/* <p><strong>Benefits Include:</strong></p>
             <ol>
               <li>Dividends earnings.</li>
               <li>Dividends shall be automatically capitalized for any member holding less than the Minimum Share Capital.</li>
-            </ol>
+            </ol> */}
 
+            <p>Can be contributed through standing order,
+check-off, mobile banking, Bank transfers or direct
+deposit.</p>
+
+<p>Can only be accessed upon membership
+withdrawal.</p>
+
+<p>Interest Rebates shall be automatically capitalized
+for any member holding less than the Minimum
+Share Capital.</p>
             <button className="btn btn-success">
               Start Saving
             </button>
@@ -179,22 +196,29 @@ function Loans() {
 
 
           <CustomAccordionItem
-            collapseId={4}
-            headerTitle={<strong>THE HANDSHAKE DEPOSITS SAVINGS</strong>}
-            isOpen={openAccordionId === 4}
+            collapseId={2}
+            headerTitle={<strong>.SHARES SAVINGS ACCOUNT</strong>}
+            isOpen={openAccordionId === 2}
             onToggle={handleAccordionToggle}
           >
-           <p>These are the continuous monthly savings that members make to the Sacco
-throughout their membership.</p>
+           <p>A tailor-made account for long-term
+saving with attractive dividends.</p>
+<p>The shares are non-refundable
+but can be transferred to existing
+member.</p>
+<p>Each member needs to have share
+capital depending on their category.
+A member may purchase shares by
+installment.</p>
 
-            <p><strong>Minimum Monthly Contributions </strong></p>
+            <p><strong>Minimum Shares</strong></p>
             <ol>
-              <li>Individuals: Kes. 1,000/=</li>
-              <li>Groups: Kes. 5,000/=</li>
-              <li>Corporates: Kes 10,000/=</li>
+              <li>Individuals: <strong>Kes. 25,000/=</strong></li>
+              <li>Groups: <strong>Kes. 25,000/=</strong></li>
+              <li>Corporates: <strong>Kes. 50,000/=</strong></li>
             </ol>
 
-            <p><strong>Features Include:</strong></p>
+            {/* <p><strong>Features Include:</strong></p>
             <ol>
               <li>Allows members to access deposit-based loans</li>
               <li>Can be contributed through standing order, check-off from salary or produce
@@ -203,15 +227,20 @@ proceeds, Mobile Banking, Bank transfers or direct deposit at the Bank.</li>
               <li>Annual interest earned shall be automatically capitalized for any member
 holding less than the Minimum Share Capital</li>
 <li>Can only be refunded upon membership withdrawal</li>
-            </ol>
+            </ol> */}
 
-            <p><strong>Benefits Include:</strong></p>
+            {/* <p><strong>Benefits Include:</strong></p>
             <ol>
               <li>Access to Loan facilities.</li>
               <li>Guarantee loans.</li>
               <li>Earn interest/rebates annually</li>
-            </ol>
+            </ol> */}
 
+            <p>
+            Dividends shall be automatically
+capitalized for any member holding
+less than the Minimum Share Capital.
+            </p>
             <button className="btn btn-success">
               Start Saving
             </button>

@@ -60,7 +60,7 @@ function Footer() {
            
             <p className="hover-black">
             <Link to= "/join/loan-products" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
-                   <small>Loan Products</small> 
+                   <small>BOSA Products</small> 
                   </Link>
             </p>
           </div>

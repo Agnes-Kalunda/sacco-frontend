@@ -5,6 +5,7 @@ import chama from "./assets/chama.jpeg";
 import { Outlet } from "react-router-dom";
 import Banner2 from './Banner2';
 import background from './assets/background.jpeg'
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   // Function to scroll to the "Office Location" section when the button is clicked
@@ -17,18 +18,30 @@ function AboutUs() {
     }
   };
 
+  const squareButtonStyle = {
+    width: "50%",
+    height: "50px",
+    marginTop: "1%",
+    borderRadius: "0",
+    background: "blue",
+    transition: "transform 0.3s ease",
+    };  
+
   return (
-    <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+
+    <div>
+<Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
       <Row>
         <Col md={6}>
           <h2 className="service" style={{ marginBottom: "10px" , paddingTop: "7%", color:"orange"}}>
             <strong>Our Mission</strong>
           </h2>
           <p>
-            "At <strong>Unity Sacco, </strong>We aim to boost savings, resilience, and financial inclusivity,
-            particularly among underserved communities. Our mission is to
-            empower individuals impacted by crises, helping them utilize
-            resources collectively for improved living standards."
+"To collectively build sustainable futures through provision of
+affordable, innovative and inclusive financial solutions that will
+
+create and sustain economic growth, resilience, and social well-
+being of the Members, and society at large."
           </p>
         </Col>
         <Col md={6}>
@@ -44,35 +57,54 @@ function AboutUs() {
             <strong>Our Vision</strong>
           </h2>
           <p>
-            "We envision accessible, sustainable credit and financial
-            empowerment. Through education and training, we equip members with
-            essential skills. Our commitment is to provide efficient,
-            disaster-resistant services, ensuring member satisfaction."
+          "A financially-inclusive community where adults, youth, and families are able to
+effectively manage their money, save, borrow and improve their livelihoods."
           </p>
         </Col>
       </Row>
 
       <Row>
         <Col md={6}>
-          <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%", color:"orange"}}>
-            <strong>Our Focus</strong>
+          <h2 className="service" style={{ marginBottom: "10px" , paddingTop: "7%", color:"orange"}}>
+            <strong>Our Strategic Objective</strong>
           </h2>
           <p>
-            "At <strong>Unity Sacco, </strong>our focus is on promoting financial inclusivity, 
-            resilience, and empowerment. We strive to uplift individuals affected 
-            by crises, fostering collective resource utilization for improved living 
-            standards. Our commitment includes providing affordable credit, offering 
-            comprehensive financial literacy training, and ensuring efficient, disaster-resistant 
-            services for member satisfaction."
+"To provide tailor-made financial services and inculcate a savings
+culture among our members as well as support members to
+develop and improve their economic and social status."
           </p>
         </Col>
         <Col md={6}>
-          <img src={background} alt="Image Alt Text" className="img-fluid" style={{ marginBottom: "10px" , paddingTop: "7%",boxShadow: "0px 4px 8px rgba(0, 255, 0, 0.6)"}}/>
+          <img src={bosa} alt="Image Alt Text" className="img-fluid" style={{ marginBottom: "10px" , paddingTop: "7%", boxShadow: "0px 4px 8px rgba(0, 255, 0, 0.6)"}}/>
         </Col>
       </Row>
 
-      <Banner2/>
+      
+
+      
+
+    
     </Container>
+
+    <div>
+    <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%", color:"orange"}}>
+            <strong>Our Core Values</strong>
+          </h2>
+          <p>Customer Focus</p> <p>Intergrity</p> <p>Reliability</p> <p>Innovation</p> <p>Listening and caring</p> <p>Proffesionalism</p>
+    </div>
+
+   
+
+
+<Banner2/>
+
+    </div>
+  
+
+        
+    
+    
+  
   );
 }
 

@@ -37,7 +37,7 @@ function Gallery() {
 
 <Container style={{ paddingTop: "25px", marginBottom: "30px" }}>
       {/* First set of images */}
-      <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:" #0096FF"}}>
+      <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:" orange"}}>
         <strong>St. Kizito Church</strong>
        
       </h2>
@@ -64,7 +64,7 @@ function Gallery() {
       </Row>
 
       {/* Second set of images */}
-      <h2 className="service" style={{ marginBottom: "15px" , paddingTop:"7%", color:" #0096FF"}}>
+      <h2 className="service" style={{ marginBottom: "15px" , paddingTop:"7%", color:" orange"}}>
         <strong>Nairobi Board Meeting</strong>
       
       </h2>
@@ -298,7 +298,7 @@ function Gallery() {
 
 
        {/* First set of images */}
-       <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:" #0096FF"}}>
+       <h2 className="service" style={{ marginBottom: "25px" ,paddingTop:"7%", color:" orange"}}>
         <strong>Ol Kario Visit</strong>
        
       </h2>

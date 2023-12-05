@@ -56,7 +56,10 @@ function Loans() {
   const [openAccordionId, setOpenAccordionId] = useState(1);
 
   const handleAccordionToggle = (collapseId) => {
-    setOpenAccordionId((prevId) => (prevId === collapseId ? null : collapseId));
+    setOpenAccordionId((prevId) => {
+      // If closing the last item, open the first one
+      return prevId === collapseId ? 1 : collapseId;
+    });
   };
 
   return (
@@ -346,21 +349,45 @@ on the assessment by Unity.</li>
           <div
             style={{
               marginTop: "20px",
-              backgroundColor: "whitesmoke",
+              backgroundColor: "#f8f9fa",
               padding: "10px",
               borderRadius: "5px",
             }}
           >
             <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
             <p style={{ fontSize: "14px", color: "#555" }}>
-              Unity SACCO Building, 123 Street, Cityville, Country
+              <strong>Nairobi Metropolis Office</strong><br/>
+              Tarikiville Mall, Mezzanine Floor<br/>
+              Namanga Rd,
+              Kitengela.<br/>
+              <p style={{ fontSize: "14px", color: "#555" }}>
+             <strong>
+             Phone: +254 748 015 761<br/>
+                    
+              </strong> 
+
+             
+            </p>
+            </p>
+
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              <strong>Maua Office</strong><br/>
+              Kenduba Building , opposite Trebil cyber<br/>
+              Maua ,
+              Meru.
+              <p style={{ fontSize: "14px", color: "#555" }}>
+             <strong>Phone: +254 748 015 761</strong> <br/>
+                   
+
+             
+            </p>
             </p>
             <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
               <strong>Contact Information</strong>
             </h4>
             <p style={{ fontSize: "14px", color: "#555" }}>
-              Phone: +123 456 7890
-              <br />
+             
+              
               Email: info@unitysacco.com
             </p>
           </div>

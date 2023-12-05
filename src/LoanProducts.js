@@ -56,9 +56,12 @@ function LoanProducts() {
   const [openAccordionId, setOpenAccordionId] = useState(1);
 
   const handleAccordionToggle = (collapseId) => {
-    setOpenAccordionId((prevId) => (prevId === collapseId ? null : collapseId));
+    setOpenAccordionId((prevId) => {
+      // If closing the last item, open the first one
+      return prevId === collapseId ? 1 : collapseId;
+    });
   };
-
+  
   return (
     <div>
      

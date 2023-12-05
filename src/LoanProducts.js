@@ -74,7 +74,7 @@ function LoanProducts() {
 
       <div className="   col-md-8 order-md-1 order-2">
       <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
-        <strong>Loan Products</strong>
+        <strong>BOSA Products</strong>
       </h2>
 
       <MDBContainer

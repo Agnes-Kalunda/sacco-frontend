@@ -40,6 +40,9 @@
     transform: rotate(360deg);
   }
 }
+.mr-auto {
+  margin-left: 15%;
+}
 
 
 .socials{
@@ -61,19 +64,19 @@
 }
 
 .nav-item:hover {
-  color:  black !important;
+  color: #0096FF  !important;
 }
 
 .nav-link:hover {
-  color:  black !important;
+  color:  #0096FF !important;
 }
 
 .nav-item .nav-link{
-  color: white;
+  color: black;
 }
 
 .navbackground{
-  background-color: #0096FF;
+  background-color: white;
 }
 
 
@@ -83,6 +86,10 @@
 }
 
 
+.dropdown-menu-dark .dropdown-item.yellow-background {
+  background-color: #ffff00;
+  color: black;
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
@@ -184,6 +191,21 @@ nav {
 	}
 }
 
+@media (max-width: 768px) {
+  .service {
+    margin-bottom: 20px;
+  }
+
+  .img-fluid {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .order-md-2.order-1 {
+    order: 1;
+    margin-left: 0px;
+  }
+}
 
 .banner {
   background-image: url('./assets/background.jpeg');
@@ -664,7 +686,17 @@ h2 {
 
 
 
+div.SubjectsBox {
+  border: solid orange 1px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
+div.Subjects {
+  border: solid purple 1px;
+  display: table-cell;
+  color: white;
+}
 
 
 

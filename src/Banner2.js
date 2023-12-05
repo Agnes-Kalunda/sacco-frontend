@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Banner2() {
   const containerStyle = {
     width: "85%",
-    height: "270px",
+    height: "280px",
     margin: "auto",
     border: "1px solid",
     padding: "40px",

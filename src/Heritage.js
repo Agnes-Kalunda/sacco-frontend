@@ -1,323 +1,116 @@
-import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import handshake from "./assets/handshake.jpg";
-import "./App.css";
-import image3 from "./assets/image3.jpeg";
-import Banner4 from "./Banner4";
-
-const squareButtonStyle = {
-  width: "100%",
-  height: "50px",
-  marginTop: "1%",
-  borderRadius: "0",
-  background: "blue",
-  transition: "transform 0.3s ease",
-};
-
-const squareButtonHoverStyle = {
-  background: "black",
-  transform: "scale(0.9)",
-};
-
-const containerStyle = {
-  paddingTop: "20px",
-};
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import image53 from "./assets/image53.png";
+import Banner2 from './Banner2';
 
 function Heritage() {
   return (
-    <Container style={containerStyle}>
-      <Row>
-        <Col md={4}>
-          {/* Content for the first column with the provided text */}
-          <h2 className="service" style={{ marginBottom: "10px", color: "orange" }}>
+
+    <div>
+    <Container>
+       <h2 className="service" style={{ marginBottom: "30px", marginTop: "50px", color:"orange" }}>
             <strong>Our Heritage</strong>
           </h2>
-          <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
-            <li
-              style={{
-                marginBottom: "10px",
-                borderBottom: "1px solid #0096FF",
-                paddingBottom: "10px",
-              }}
-            >
-              Community Mobilization: Engaging individuals, companies, and
-              communities.
-            </li>
-            <li
-              style={{
-                marginBottom: "10px",
-                borderBottom: "1px solid #0096FF",
-                paddingBottom: "10px",
-              }}
-            >
-              Resilience Building: Lifting members from crises, fostering
-              collective resource utilization.
-            </li>
-            <li
-              style={{
-                marginBottom: "10px",
-                borderBottom: "1px solid #0096FF",
-                paddingBottom: "10px",
-              }}
-            >
-              Financial Inclusivity: Providing affordable, sustainable credit
-              and financial literacy training.
-            </li>
-            <li
-              style={{
-                marginBottom: "10px",
-                borderBottom: "1px solid #0096FF",
-                paddingBottom: "10px",
-              }}
-            >
-              Efficient Services: Ensuring satisfaction through disaster
-              risk-free and effective services.
-            </li>
-          </ul>
+      <Row>
+        {/* First Column */}
+        <Col xs={12} md={6}>
+          {/* Your content for the first column */}
+        
+          <p>The <strong>Unity SACCO</strong> Society limited was conceived out
+of need for a more flexible, tailor-made and inclusive
+financial systems to provide solidarity support to
+largely underserved last-mile segments of the
+society whose sources of income and livelihoods
+have been affected by multiple global crises that
+have defied conventional Interventions.
+
+Established in 2018 and registered as a non-
+Deposit-taking Sacco, we have enabled our
+
+valued members, primarily smallholder producers
+drawn from commodity associations, to access
+capital, financial products and related services.
+This has ultimately helped our members to build
+financial assets, promote entrepreneurship, and
+start enterprises within the value chain that have
+created jobs, and helped restore hope, dignity, build
+resilience and transform livelihoods.
+As any other institution whose resilience was
+tested - and shaken - by the Covid-19 pandemic
+exacerbating the climate change-fueled drought
+that had plunged agriculture-dependent
+population into despair, we endured and rose to
+overcome the turmoil triggered by the two crises
+that collapsed many organisations.</p>
+
+<p>However, it didn’t escape lessons to us that
+ensuring a resiliently sound financial position
+during times of both prosperity and instability
+is essential in securing financial well-being and
+upward socio-economic mobility of people, society
+and economies.</p>
+
+
+<p>The bedrock of our Membership remains
+smallholder producers of sorghum, sunflower and
+honey, as well as Small Micro enterprises and Small
+Internal Lending Communities (SILCs) driven by
+these commodities. Conscious that they ought to
+live in interdependence nature, adapt and build
+resilience to the unpredictably changing climate,
+our members actively participate in initiatives that
+contribute to national sustainable development
+and adaptation plans.</p>
+<p>We have worked with <strong>Unity SACCO</strong> about
+
+Forest Community Associations, Water Resources
+Associations, youth and women groups to develop
+tailor-made products to support their work.
+In addition to supporting our members in their
+commodity value chain development, we also avail
+to them innovative financial models that build
+knowledge, skills, and habits through coaching or
+counseling to help them define their financial goals,
+develop financial plans, and select and use our
+financial products designed for their context.</p>
         </Col>
 
-        <Col md={4}>
-          {/* Content for the third column with an image at the top */}
-          <h2 className="service" style={{ marginBottom: "10px", marginTop: "50px" }}>
-            <strong></strong>
-          </h2>
+        {/* Second Column */}
+        <Col xs={12} md={6}>
+          {/* Your content for the second column */}
+          
           <img
-            src={image3}
+            src={image53}
             alt="Image Alt Text"
             className="img-fluid"
             style={{ marginTop: "7%", marginBottom: "7%" }}
           />
+
           <p>
-            Our objectives encompass promoting financial inclusion by engaging
-            diverse members and communities. We focus on community mobilization,
-            resilience building, and providing financial literacy training. Our
-            commitment extends to ensuring efficient and disaster risk-free
-            services. Unity SACCO strives for diversity in membership,
-            streamlining the registration process, and offering innovative
-            savings and tailored loan products. Our short-term loan solutions
-            address recurrent financing needs, allowing members to concentrate
-            on their activities without disruption.
-          </p>
+What makes us completely different from
+conventional SACCO practices whose focus is saving
+and lending, is that we work in solidarity with our
+members, first by jointly identifying their needs,
+working together to define the niche and walking
+the journey towards realizing their dream, translating
+it into reality.
+We consider ourselves, our members and partners
+as risk takers navigating through “unchartered
+waters” conventional investors consider no-go zones
+- where we work with business people, and persons
+in informal employment, investment micro-groups
+(SILCs) and start-ups to co-create and incubate ideas
+that ultimately evolve into transformative initiatives.</p>
         </Col>
-
-        <Col md={4}>
-          {/* Content for the second column with 5 small rows as styled buttons */}
-          <h3></h3>
-          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Education Loan
-</Button>
-
-              </Link>
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Utu Bora
-</Button>
-              </Link>
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Mobile Loan
-</Button>
-              </Link>
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Karibu Loan
-</Button>
-              </Link>
-            </Col>
-          </Row>
-         
-          <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
-            {/* <small>
-              Do not hesitate to reach out if you have inquiries regarding our
-              loan services.
-            </small> */}
-          </h4>
-          <div
-            style={{
-              marginTop: "20px",
-              backgroundColor: "#f8f9fa",
-              padding: "10px",
-              borderRadius: "5px",
-            }}
-          >
-            <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
-            <p style={{ fontSize: "14px", color: "#555" }}>
-              <strong>Nairobi Metropolis Office</strong><br/>
-              Tarikiville Mall, Mezzanine Floor<br/>
-              Namanga Rd,
-              Kitengela.<br/>
-              <p style={{ fontSize: "14px", color: "#555" }}>
-             <strong>
-             Phone: +254 748 015 761<br/>
-                    +254 788 392 446
-              </strong> 
-
-             
-            </p>
-            </p>
-
-            <p style={{ fontSize: "14px", color: "#555" }}>
-              <strong>Maua Office</strong><br/>
-              Kenduba Building , opposite Trebil cyber<br/>
-              Maua ,
-              Meru.
-              <p style={{ fontSize: "14px", color: "#555" }}>
-             <strong>Phone: +254 748 015 761</strong> <br/>
-                   
-
-             
-            </p>
-            </p>
-            <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
-              <strong>Contact Information</strong>
-            </h4>
-            <p style={{ fontSize: "14px", color: "#555" }}>
-             
-              
-              Email: info@unitysacco.com
-            </p>
-          </div>
-        </Col>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
       </Row>
-      <div style={{ marginTop: "5%" }}>
-        <Banner4 />
-      </div>
     </Container>
+<div>
+<Banner2/>
+</div>
+    
+
+    </div>
+
   );
 }
 

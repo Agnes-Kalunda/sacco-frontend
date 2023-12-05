@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logoo from './assets/unitylogo.png'
 
 const navBarData = [
   {
@@ -42,8 +43,8 @@ const navBarData = [
         url: "borrow-from-us",
       },
       {
-        label: "Loan Products",
-        url: "loan-products",
+        label: "BOSA Products",
+        url: "bosa-products",
       },
       {
         label: "Loan eligibility",
@@ -101,7 +102,26 @@ function NavBar() {
 
   const dropdownItemStyle = {
     color: "black",
+    backgroundColor:"orange"
   };
+
+
+  const yellowBackgroundItems = [
+    "Vision, Mission and Focus",
+    "Our Heritage",
+    "Leadership",
+    "Join us today",
+    "Borrow from us today",
+    "Loan Products",
+    "Loan eligibility",
+    "Payment Modes",
+    "Policies",
+    "Newsletter",
+    "Downloads",
+    "FAQs",
+    "Gallery",
+  ];
+  
 
   const specialItems = ["HOME", "CAREERS", "CONTACT US"];
 
@@ -133,7 +153,7 @@ function NavBar() {
             to={fullPath}
             key={index}
             className={`nav-item${isSpecialMenuItem ? " special-menu-item" : ""}`}
-            style={isSpecialMenuItem ? { color: "white" } : navbarItemStyle}
+            style={isSpecialMenuItem ? { color: "black" } : navbarItemStyle}
             onClick={handleDropdownItemClick}
           >
             {item.label}
@@ -158,15 +178,13 @@ function NavBar() {
         }}
       >
         <Navbar.Brand as={Link} to="/" role="menuitem">
-          {/* Uncomment and customize the logo */}
-          {/* <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} /> */}
+          <img src={logoo} alt="Logo" style={{ width: '90px', height: 'auto'}} />
         </Navbar.Brand>
-        <Button variant="success" style={{ color: "white" }}>
+        <Button variant="success" style={{ color: "white", height: "50px", marginTop: "35px" }}>
           Member Login
         </Button>
       </div>
       <div className="d-flex sticky-top">
-        {/* Add the "sticky-top" class here */}
         <Navbar
           className="container-fluid"
           bg="#2E8B57"
@@ -175,10 +193,11 @@ function NavBar() {
           role="navigation"
           expanded={navbarExpanded}
           onToggle={handleNavbarToggle}
+          style={{ marginLeft: '4%' }}
         >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto container-fluid flex justify-content-center">
+            <Nav className="mr-auto container-fluid flex justify-content-center" style={{ marginLeft: '5%' }}>
               {menuShow(navBarData)}
             </Nav>
           </Navbar.Collapse>

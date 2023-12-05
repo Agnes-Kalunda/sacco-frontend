@@ -43,7 +43,7 @@ function App() {
             <Route path="save-with-us" element={<Savings />} />
             <Route path="borrow-from-us" element={<Loans />} />
             <Route path="loan-eligibility" element={<LoanEligibility />} />
-            <Route path="loan-products" element={<LoanProducts />} />
+            <Route path="bosa-products" element={<LoanProducts />} />
             
           </Route>
 

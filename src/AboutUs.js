@@ -21,7 +21,7 @@ function AboutUs() {
     <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
       <Row>
         <Col md={6}>
-          <h2 className="service" style={{ marginBottom: "10px" , paddingTop: "7%", color:"#0096FF"}}>
+          <h2 className="service" style={{ marginBottom: "10px" , paddingTop: "7%", color:"orange"}}>
             <strong>Our Mission</strong>
           </h2>
           <p>
@@ -40,7 +40,7 @@ function AboutUs() {
           <img src={chama} alt="Image Alt Text" className="img-fluid" style={{ marginBottom: "10px" , paddingTop: "7%",  boxShadow: "0px 4px 8px rgba(0, 255, 0, 0.6)"}}/>
         </Col>
         <Col md={6} style={{ paddingTop: "20px" }}>
-          <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%" , color:"#0096FF"}}>
+          <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%" , color:"orange"}}>
             <strong>Our Vision</strong>
           </h2>
           <p>
@@ -54,7 +54,7 @@ function AboutUs() {
 
       <Row>
         <Col md={6}>
-          <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%", color:"#0096FF"}}>
+          <h2 className="service" style={{ marginBottom: "10px", paddingTop:"7%", color:"orange"}}>
             <strong>Our Focus</strong>
           </h2>
           <p>

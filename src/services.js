@@ -11,6 +11,7 @@ import {
   faChartLine,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import './App.css'
 
 function Services() {
   const cardsData = [
@@ -61,7 +62,7 @@ function Services() {
   return (
     <div className="services">
       <Container className="p-4">
-        <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
+        <h2 className="service" style={{ marginBottom: "10px", color: "orange" }}>
           <strong>Our Services</strong>
         </h2>
         <hr style={{ marginBottom: "20px" }} />
@@ -81,7 +82,7 @@ function Services() {
 
                   <Card.Text className="card-text">{card.text}</Card.Text>
                   {/* Wrap the button with Link and set the 'to' attribute to the specified link */}
-                  <Link to={card.link} className="btn btn-primary">
+                  <Link to={card.link} className="btn btn-success"> {/* Apply the custom class */}
                     Read More
                   </Link>
                 </Card.Body>

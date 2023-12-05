@@ -96,7 +96,7 @@ function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
 
   const navbarItemStyle = {
-    color: navbarExpanded ? "black" : "#2E8B57",
+    color: navbarExpanded ? "black" : "black",
   };
 
   const dropdownItemStyle = {

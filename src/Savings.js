@@ -70,7 +70,7 @@ function Loans() {
      
 
       <div className="   col-md-8 order-md-1 order-2">
-      <h2 className="service" style={{ marginTop: "4%", color: "#0096FF" }}>
+      <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
         <strong>Savings</strong>
       </h2>
 
@@ -100,7 +100,7 @@ function Loans() {
               <li>Such deposits will earn an interest on an annual basis.</li>
               <li>Can be used as additional collateral for loans.</li>
             </ol>
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Start Saving
             </button>
           </CustomAccordionItem>
@@ -132,7 +132,7 @@ function Loans() {
               <li>Access to loan facilities.</li>
             </ol>
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Start Saving
             </button>
           </CustomAccordionItem>
@@ -167,7 +167,7 @@ function Loans() {
               <li>Dividends shall be automatically capitalized for any member holding less than the Minimum Share Capital.</li>
             </ol>
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Start Saving
             </button>
           </CustomAccordionItem>
@@ -209,7 +209,7 @@ holding less than the Minimum Share Capital</li>
               <li>Earn interest/rebates annually</li>
             </ol>
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Start Saving
             </button>
           </CustomAccordionItem>

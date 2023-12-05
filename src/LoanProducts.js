@@ -70,7 +70,7 @@ function LoanProducts() {
      
 
       <div className="   col-md-8 order-md-1 order-2">
-      <h2 className="service" style={{ marginTop: "4%", color: "#0096FF" }}>
+      <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
         <strong>Loan Products</strong>
       </h2>
 
@@ -117,7 +117,7 @@ and/or climate change-inspired events</li>
 Companies or Partners</li>
               
             </ol>
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -173,7 +173,7 @@ Acquire collateral for loans as opposed to having guarantors.</li>
 
             
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -239,7 +239,7 @@ their hard-earned returns.
 
 
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -277,7 +277,7 @@ Project funds.</p>
 
           
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>

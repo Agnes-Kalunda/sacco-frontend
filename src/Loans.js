@@ -70,7 +70,7 @@ function Loans() {
      
 
       <div className="   col-md-8 order-md-1 order-2">
-      <h2 className="service" style={{ marginTop: "4%", color: "#0096FF" }}>
+      <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
         <strong>Loans</strong>
       </h2>
 
@@ -101,7 +101,7 @@ function Loans() {
 convenient way</li>
               
             </ol>
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -119,7 +119,7 @@ interventions that improve students’ learning outcomes without disruptions.
 
             
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -135,7 +135,7 @@ incentives to access credit before the six months of membership period is over.<
 
           
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>
@@ -178,7 +178,7 @@ on the assessment by Unity.</li>
 
           
 
-            <button className="learn-more-button blue-button">
+            <button className="btn btn-success">
               Inquire
             </button>
           </CustomAccordionItem>

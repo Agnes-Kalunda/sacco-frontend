@@ -7,6 +7,7 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "./assets/logg.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -23,15 +24,19 @@ function Footer() {
               <strong>ABOUT US</strong>
             </h6>
             <p className="hover-black">
-              <small>
-                Our Vision and Mission
-              </small>
+            <Link to= "/about-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Our Vision and Mision</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Unity Sacco Heritage</small>
+            <Link to= "/about-us/our-heritage" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Unity Sacco Heritage</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Unity Sacco Leadership</small>
+            <Link to= "/about-us/leadership" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Unity Sacco Leadership</small> 
+                  </Link>
             </p>
           </div>
 
@@ -43,16 +48,20 @@ function Footer() {
               <strong>SERVICES</strong>
             </h6>
             <p className="hover-black">
-              <small>Savings Schemes</small>
+            <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Saving Schemes</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Loans Offered</small>
+            <Link to= "/join/borrow-from-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Loans</small> 
+                  </Link>
             </p>
+           
             <p className="hover-black">
-              <small>Shares</small>
-            </p>
-            <p className="hover-black">
-              <small>Loan Products</small>
+            <Link to= "/join/loan-products" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Loan Products</small> 
+                  </Link>
             </p>
           </div>
 
@@ -64,13 +73,19 @@ function Footer() {
               <strong>SAVINGS</strong>
             </h6>
             <p className="hover-black">
-              <small>Bosa shares</small>
+            <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>BOSA Shares</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Handshake Deposits</small>
+            <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Handshake deposits</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Jikakamue savings</small>
+            <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Jikakamue Savings</small> 
+                  </Link>
             </p>
           </div>
 
@@ -82,16 +97,24 @@ function Footer() {
               <strong>LOANS</strong>
             </h6>
             <p className="hover-black">
-              <small>Utu Bora Lending</small>
+            <Link to= "/join/borrow-from-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Utu Bora Lending</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Education Loans</small>
+            <Link to= "/join/borrow-from-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Education Loans</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Mobile Loans</small>
+            <Link to= "/join/borrow-from-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Mobile Loans</small> 
+                  </Link>
             </p>
             <p className="hover-black">
-              <small>Karibu Loans</small>
+            <Link to= "/join/borrow-from-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
+                   <small>Karibu Loans</small> 
+                  </Link>
             </p>
           </div>
 

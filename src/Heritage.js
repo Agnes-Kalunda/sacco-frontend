@@ -30,7 +30,7 @@ function Heritage() {
       <Row>
         <Col md={4}>
           {/* Content for the first column with the provided text */}
-          <h2 className="service" style={{ marginBottom: "10px", color: "#0096FF" }}>
+          <h2 className="service" style={{ marginBottom: "10px", color: "orange" }}>
             <strong>Our Heritage</strong>
           </h2>
           <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
@@ -112,6 +112,14 @@ function Heritage() {
                   size="lg"
                   style={squareButtonStyle}
                   className="btn-hover"
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "white";
+                    e.target.style.color = "#0096FF";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#0096FF";
+                    e.target.style.color = "white";
+                  }}
                 >
                   Education Loan
                 </Button>
@@ -189,6 +197,53 @@ function Heritage() {
             </p>
           </div>
         </Col>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
       </Row>
       <div style={{ marginTop: "5%" }}>
         <Banner4 />

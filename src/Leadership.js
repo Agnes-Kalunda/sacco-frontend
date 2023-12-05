@@ -18,7 +18,7 @@ const Leadership = () => {
     <div>
       <h2
         className="service"
-        style={{ marginBottom: "10px", marginTop: "20px" , color: "#0096FF"}}
+        style={{ marginBottom: "10px", marginTop: "20px" , color: "orange"}}
       >
         <strong>Below is Our able team</strong>
       </h2>

@@ -130,17 +130,32 @@ function Footer() {
                 <i className="fas fa-map-marker mr-3"></i> Nairobi, Kenya
               </small>
             </p>
+           
+            <p className="">
+              <small>
+                <i className="fas fa-phone mr-3"></i> +254 748 015 761
+              </small>
+            </p>
+
+            <p className="">
+              <small>
+                <i className="fas fa-map-marker mr-3"></i> Maua, Meru
+              </small>
+            </p>
+            
+            <p className="">
+              <small>
+                <i className="fas fa-phone mr-3"></i> +254 748 015 761
+              </small>
+            </p>
             <p className="">
               <small>
                 <i className="fas fa-envelope mr-3"></i> Unitysacco@gmail.com
               </small>
             </p>
-            <p className="">
-              <small>
-                <i className="fas fa-phone mr-3"></i> +254 000 0000
-              </small>
-            </p>
           </div>
+
+          
         </div>
 
         {/* #second row */}

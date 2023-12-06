@@ -4,7 +4,10 @@ import Banner3 from './Banner2';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Banner2 from "./Banner2";
-
+import image55 from './assets/image55.jpg';
+import mobile from './assets/mobile.jpeg';
+import educa from './assets/educa.jpeg'
+import background from './assets/background.jpeg'
 
 
 
@@ -82,12 +85,21 @@ function Loans() {
         style={{ maxWidth: "600px", marginBottom: "10%" }} // Adjust the width here
       >
         <MDBAccordion alwaysOpen initialActive={openAccordionId}>
-          <CustomAccordionItem
+         <div>
+          <div>
+             <CustomAccordionItem
             collapseId={1}
             headerTitle={<strong>MOBILE LOANS</strong>}
             isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
           >
+
+<img
+            src={mobile}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"80%", height:"200px"}}
+          />
             <p>
             These will be applied for and issued via either a mobile Application or USSD code.
             </p>
@@ -107,7 +119,13 @@ convenient way</li>
             <button className="btn btn-success">
               Inquire
             </button>
+            
           </CustomAccordionItem>
+          </div>
+
+         </div>
+         
+         
 
           <CustomAccordionItem
             collapseId={2}
@@ -115,6 +133,12 @@ convenient way</li>
             isOpen={openAccordionId === 2}
             onToggle={handleAccordionToggle}
           >
+            <img
+            src={educa}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"90%", height:"200px"}}
+          />
             <p>
             Our education loan is designed to enable families afford school fees and invest in
 interventions that improve students’ learning outcomes without disruptions.
@@ -133,6 +157,13 @@ interventions that improve students’ learning outcomes without disruptions.
             isOpen={openAccordionId === 3}
             onToggle={handleAccordionToggle}
           >
+
+           <img
+            src={background}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" }}
+          />
             <p>This is meant to promote active membership through offering new members
 incentives to access credit before the six months of membership period is over.</p>
 
@@ -200,7 +231,7 @@ on the assessment by Unity.</li>
           <h3></h3>
           <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
             <Col>
-              <Link to="/join/loan-products">
+              <Link to="/join/bosa-products">
               <Button
   variant="primary"
   size="lg"
@@ -228,7 +259,7 @@ on the assessment by Unity.</li>
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/join/loan-products">
+              <Link to="/join/bosa-products">
               <Button
   variant="primary"
   size="lg"
@@ -256,7 +287,7 @@ on the assessment by Unity.</li>
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/join/loan-products">
+              <Link to="/join/bosa-products">
               <Button
   variant="primary"
   size="lg"
@@ -284,7 +315,7 @@ on the assessment by Unity.</li>
           </Row>
           <Row className="mb-3">
             <Col>
-              <Link to="/join/loan-products">
+              <Link to="/join/bosa-products">
               <Button
   variant="primary"
   size="lg"
@@ -314,7 +345,7 @@ on the assessment by Unity.</li>
 
           <Row className="mb-3">
             <Col>
-              <Link to="/join/loan-products">
+              <Link to="/join/bosa-products">
               <Button
   variant="primary"
   size="lg"

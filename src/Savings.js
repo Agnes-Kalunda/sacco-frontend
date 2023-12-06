@@ -4,6 +4,8 @@ import Banner3 from './Banner2';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Banner2 from "./Banner2";
+import image53 from './assets/image53.png'
+import image55 from './assets/image55.jpg'
 
 
 
@@ -176,7 +178,12 @@ to access deposit-based loans.</p>
               <li>Dividends earnings.</li>
               <li>Dividends shall be automatically capitalized for any member holding less than the Minimum Share Capital.</li>
             </ol> */}
-
+  <img
+            src={image55}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" }}
+          />
             <p>Can be contributed through standing order,
 check-off, mobile banking, Bank transfers or direct
 deposit.</p>
@@ -211,6 +218,13 @@ capital depending on their category.
 A member may purchase shares by
 installment.</p>
 
+<img
+            src={image53}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"100%", height:"280px"}}
+          />
+
             <p><strong>Minimum Shares</strong></p>
             <ol>
               <li>Individuals: <strong>Kes. 25,000/=</strong></li>
@@ -241,6 +255,7 @@ holding less than the Minimum Share Capital</li>
 capitalized for any member holding
 less than the Minimum Share Capital.
             </p>
+          
             <button className="btn btn-success">
               Start Saving
             </button>

@@ -4,6 +4,7 @@ import Banner3 from './Banner2';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Banner2 from "./Banner2";
+import image52 from './assets/image52.png';
 
 
 

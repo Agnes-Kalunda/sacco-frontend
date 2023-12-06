@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logoo from './assets/unitylogo.png'
@@ -95,6 +95,7 @@ const navBarData = [
 
 function NavBar() {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   const navbarItemStyle = {
     color: navbarExpanded ? "black" : "black",
@@ -102,9 +103,8 @@ function NavBar() {
 
   const dropdownItemStyle = {
     color: "black",
-    backgroundColor:"orange"
+    backgroundColor: "orange",
   };
-
 
   const yellowBackgroundItems = [
     "Vision, Mission and Focus",
@@ -121,7 +121,6 @@ function NavBar() {
     "FAQs",
     "Gallery",
   ];
-  
 
   const specialItems = ["HOME", "CAREERS", "CONTACT US"];
 
@@ -163,12 +162,30 @@ function NavBar() {
     });
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsNavbarFixed(true);
+    } else {
+      setIsNavbarFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleNavbarToggle = () => {
     setNavbarExpanded(!navbarExpanded);
   };
 
+
   return (
-    <div className="navbackground">
+    <div className={`navbackground ${isNavbarFixed ? "fixed-navbar" : ""}`}>
+         <div className="navbackground">
       <div
         style={{
           display: "flex",
@@ -203,6 +220,8 @@ function NavBar() {
           </Navbar.Collapse>
         </Navbar>
       </div>
+    </div>
+  
     </div>
   );
 }

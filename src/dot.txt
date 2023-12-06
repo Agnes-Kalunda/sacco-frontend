@@ -1,210 +1,301 @@
-import React, { useState } from "react";
-import { Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
+
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logoo from './assets/unitylogo.png'
-
-const navBarData = [
-  {
-    label: "HOME",
-    url: "/",
-  },
-  {
-    label: "ABOUT US",
-    url: "/about-us",
-    submenu: [
-      {
-        label: "Vision, Mission and Focus",
-        url: "",
-      },
-      {
-        label: "Our Heritage",
-        url: "our-heritage",
-      },
-      {
-        label: "Leadership",
-        url: "leadership",
-      },
-    ],
-  },
-  {
-    label: "SAVE AND BORROW",
-    url: "/join",
-    submenu: [
-      {
-        label: "Join us today",
-        url: "",
-      },
-      {
-        label: "Save with us today",
-        url: "save-with-us",
-      },
-      {
-        label: "Borrow from us today",
-        url: "borrow-from-us",
-      },
-      {
-        label: "BOSA Products",
-        url: "bosa-products",
-      },
-      {
-        label: "Loan eligibility",
-        url: "loan-eligibility",
-      },
-    ],
-  },
-  {
-    label: "RESOURCES",
-    url: "resources",
-    submenu: [
-      {
-        label: "Payment Modes",
-        url: "",
-      },
-      {
-        label: "Policies",
-        url: "policies",
-      },
-      {
-        label: "Newsletter",
-        url: "newsletter",
-      },
-      {
-        label: "Downloads",
-        url: "downloads",
-      },
-      {
-        label: "Gallery",
-        url: "gallery",
-      },
-      {
-        label: "FAQs",
-        url: "faqs",
-      },
-    ],
-  },
-  {
-    label: "CAREERS",
-    url: "/careers",
-  },
-  {
-    label: "CONTACT US",
-    url: "/contact-us",
-  },
-];
-// ... (import statements)
-
-function NavBar() {
-  const [navbarExpanded, setNavbarExpanded] = useState(false);
-
-  const navbarItemStyle = {
-    color: navbarExpanded ? "black" : "black",
-  };
-
-  const dropdownItemStyle = {
-    color: "black",
-    backgroundColor:"orange"
-  };
+import Banner2 from "./Banner2";
+import image51 from './assets/image51.png';
+import mpesa from './assets/mpesa.jpeg'
 
 
-  const yellowBackgroundItems = [
-    "Vision, Mission and Focus",
-    "Our Heritage",
-    "Leadership",
-    "Join us today",
-    "Borrow from us today",
-    "Loan Products",
-    "Loan eligibility",
-    "Payment Modes",
-    "Policies",
-    "Newsletter",
-    "Downloads",
-    "FAQs",
-    "Gallery",
-  ];
-  
+const squareButtonStyle = {
+  width: "50%",
+  height: "50px",
+  marginTop: "1%",
+  borderRadius: "0",
+  background: "blue",
+  transition: "transform 0.3s ease",
+  };  
 
-  const specialItems = ["HOME", "CAREERS", "CONTACT US"];
-
-  const menuShow = (mItems, parentPath = "") => {
-    const handleDropdownItemClick = () => {
-      setNavbarExpanded(false);
-    };
-
-    return mItems.map((item, index) => {
-      const fullPath = `${parentPath}${item.url}`;
-
-      if (item.submenu) {
-        return (
-          <NavDropdown
-            title={item.label}
-            key={index}
-            className="dropdown-menu-dark dropdown"
-            role="menu"
-            style={specialItems.includes(item.label) ? dropdownItemStyle : {}}
-          >
-            {menuShow(item.submenu, `${fullPath}/`)}
-          </NavDropdown>
-        );
-      } else {
-        const isSpecialMenuItem = specialItems.includes(item.label);
-        return (
-          <Nav.Link
-            as={Link}
-            to={fullPath}
-            key={index}
-            className={`nav-item${isSpecialMenuItem ? " special-menu-item" : ""}`}
-            style={isSpecialMenuItem ? { color: "black" } : navbarItemStyle}
-            onClick={handleDropdownItemClick}
-          >
-            {item.label}
-          </Nav.Link>
-        );
-      }
-    });
-  };
-
-  const handleNavbarToggle = () => {
-    setNavbarExpanded(!navbarExpanded);
-  };
-
+function PaymentModes() {
   return (
-    <div className="navbackground">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "10px",
-          width: "100%",
-        }}
-      >
-        <Navbar.Brand as={Link} to="/" role="menuitem">
-          <img src={logoo} alt="Logo" style={{ width: '90px', height: 'auto'}} />
-        </Navbar.Brand>
-        <Button variant="success" style={{ color: "white", height: "50px", marginTop: "35px" }}>
-          Member Login
-        </Button>
-      </div>
-      <div className="d-flex sticky-top">
-        <Navbar
-          className="container-fluid"
-          bg="#2E8B57"
-          expand="lg"
-          variant=""
-          role="navigation"
-          expanded={navbarExpanded}
-          onToggle={handleNavbarToggle}
-          style={{ marginLeft: '4%' }}
-        >
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto container-fluid flex justify-content-center" style={{ marginLeft: '5%' }}>
-              {menuShow(navBarData)}
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+
+    <div>
+ <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
+        <strong>Payment Modes</strong>
+      </h2>
+<Container>
+      {/* Stack the columns on mobile by making one full-width and the other half-width */}
+      <Row>
+        <Col xs={12} md={8}>
+          
+          <div style={{ marginTop:"5%"}}>
+            <div>
+            <img
+            src={mpesa}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" }}
+          />
+            </div>
+            <div>
+              <ul>
+                <li>Go to the <strong>Mpesa Menu</strong></li>
+                <li>Select <strong>Lipa na M-PESA</strong></li>
+                <li>Select <strong>Pay Bill</strong></li>
+                <li>Enter Business Number  <strong>: 400222</strong></li>
+                <li>Enter Account Number <strong>: 8484#</strong></li>
+              </ul>
+            </div>
+          </div>
+        </Col>
+        <Col xs={6} md={4}>
+        <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
+            <Col>
+              <Link to="/join/borrow-from-us">
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Mobile Loans
+</Button>
+
+              </Link>
+            </Col>
+          </Row>
+
+          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
+            <Col>
+              <Link to="/join/borrow-from-us">
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Education Loan
+</Button>
+
+              </Link>
+            </Col>
+          </Row>   
+
+
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Utu Bora
+</Button>
+
+              </Link>
+            </Col>
+          </Row>
+
+
+
+
+
+
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Utu Bora
+</Button>
+
+              </Link>
+            </Col>
+          </Row>
+
+
+
+
+
+          <Row className="mb-3">
+            <Col>
+              <Link to="/join/borrow-from-us">
+              <Button
+  variant="primary"
+  size="lg"
+  style={{
+    ...squareButtonStyle,
+    backgroundColor: "#0096FF",
+    color: "white",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
+  }}
+  className="btn-hover"
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "black";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#0096FF";
+    e.target.style.color = "white";
+  }}
+>
+  Karibu Loan
+</Button>
+
+              </Link>
+            </Col>
+          </Row>
+
+
+
+
+
+
+          <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
+            {/* <small>
+              Do not hesitate to reach out if you have inquiries regarding our
+              loan services.
+            </small> */}
+          </h4>
+          <div
+            style={{
+              marginTop: "20px",
+              backgroundColor: "#f8f9fa",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              <strong>Nairobi Metropolis Office</strong><br/>
+              Tarikiville Mall, Mezzanine Floor<br/>
+              Namanga Rd,
+              Kitengela.<br/>
+              <p style={{ fontSize: "14px", color: "#555" }}>
+             <strong>
+             Phone: +254 748 015 761<br/>
+                   
+              </strong> 
+
+             
+            </p>
+            </p>
+
+            <p style={{ fontSize: "14px", color: "#555" }}>
+              <strong>Maua Office</strong><br/>
+              Kenduba Building , opposite Trebil cyber<br/>
+              Maua ,
+              Meru.
+              <p style={{ fontSize: "14px", color: "#555" }}>
+             <strong>Phone: +254 748 015 761</strong> <br/>
+                   
+
+             
+            </p>
+            </p>
+            <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
+              <strong>Contact Information</strong>
+            </h4>
+            <p style={{ fontSize: "14px", color: "#555" }}>
+             
+              
+              Email: info@unitysacco.com
+            </p>
+          </div>
+
+
+
+        </Col>
+      </Row>
+
+      {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
+      {/* <Row>
+        <Col xs={6} md={4}>
+          xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+          xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+          xs=6 md=4
+        </Col>
+      </Row> */}
+
+      {/* Columns are always 50% wide, on mobile and desktop */}
+      {/* <Row>
+        <Col xs={6}>xs=6</Col>
+        <Col xs={6}>xs=6</Col>
+      </Row> */}
+    </Container>
+
+    <div style={{marginTop:"7%"}}>
+    <Banner2/>
     </div>
+   
+    </div>
+    
+
+   
+
+
   );
 }
 
-export default NavBar; 
+export default PaymentModes;

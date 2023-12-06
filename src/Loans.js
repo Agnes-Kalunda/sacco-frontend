@@ -426,8 +426,11 @@ on the assessment by Unity.</li>
 
 
     </div>
-
+<div style={{marginTop:"5%"}}>
 <Banner2/>
+
+</div>
+
     </div>
     
     

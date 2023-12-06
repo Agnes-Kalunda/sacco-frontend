@@ -5,6 +5,9 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Banner2 from "./Banner2";
 import image52 from './assets/image52.png';
+import image51 from './assets/image51.png';
+import image53 from './assets/image53.png';
+import image50 from './assets/image50.png';
 
 
 
@@ -102,6 +105,13 @@ status and attain financial independence.
 
             </ol>
 
+            <img
+            src={image52}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"90%", height:"200px"}}
+          />
+
 
             <p><strong>Features Include:</strong></p>
             <ol>
@@ -147,7 +157,12 @@ Companies or Partners</li>
                 <li>SMEs</li>
               </li>
             </ol>
-
+            <img
+            src={image51}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"90%", height:"350px"}}
+          />
 
             <p><strong>Features Include:</strong></p>
             <ol>
@@ -211,7 +226,12 @@ partners.</p>
 
             </ol>
 
-
+            <img
+            src={image50}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%"}}
+          />
 
             <p><strong>Features Include:</strong></p>
             <ol>
@@ -266,7 +286,12 @@ Project funds.</p>
               <li>Members needing additional project funds, but have existing loans</li>
          
             </ol>
-
+            <img
+            src={image52}
+            alt="Image Alt Text"
+            className="img-fluid"
+            style={{ marginTop: "7%", marginBottom: "7%" , width:"90%", height:"200px"}}
+          />
             <p><strong>Features Include:</strong></p>
             <ol>
               <li>The existing loan(S) must have a good repayment record</li>

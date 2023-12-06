@@ -145,7 +145,7 @@ function Loans() {
 
           <CustomAccordionItem
             collapseId={1}
-            headerTitle={<strong>SHARES SAVINGS ACCOUNT</strong>}
+            headerTitle={<strong>ALPHA DEPOSITS SAVINGS ACCOUNT</strong>}
             isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
           > 
@@ -160,7 +160,7 @@ to access deposit-based loans.</p>
             <ol>
               <li>Individuals: <strong>Kes. 1,000/=</strong></li>
               <li>Groups: <strong>Kes. 5,000/=</strong></li>
-              <li>Corporates: <strong>Kes. 10,000/=</strong></li>
+              <li>Corporates: <strong>Kes. 30,000/=</strong></li>
             </ol>
 
             {/* <p><strong>Features Include:</strong></p>
@@ -197,7 +197,7 @@ Share Capital.</p>
 
           <CustomAccordionItem
             collapseId={2}
-            headerTitle={<strong>.SHARES SAVINGS ACCOUNT</strong>}
+            headerTitle={<strong>SHARES SAVINGS ACCOUNT</strong>}
             isOpen={openAccordionId === 2}
             onToggle={handleAccordionToggle}
           >

@@ -39,7 +39,7 @@ const Socials = () => {
 
     <h6 style={{ color: "white" }}>
         <small>
-          <i className="fas fa-phone mr-3"></i> 07000000000
+          <i className="fas fa-phone mr-3"></i> +254 748 015 761
         </small>
       </h6>
 

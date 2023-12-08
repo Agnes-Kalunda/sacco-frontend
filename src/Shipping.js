@@ -6,7 +6,7 @@ const Shipping = () => {
 
     const content = (
         <>
-            <label htmlFor="sameAsBilling">
+            {/* <label htmlFor="sameAsBilling">
                 <input
                     type="checkbox"
                     id="sameAsBilling"
@@ -15,74 +15,74 @@ const Shipping = () => {
                     onChange={handleChange}
                 />
                 Same as Billing Address
-            </label>
+            </label> */}
 
             <div className="split-container">
                 <div className="flex-col">
-                    <label htmlFor="shipFirstName">First Name</label>
+                    <label htmlFor="employerName">Employer Name</label>
                     <input
                         type="text"
-                        id="shipFirstName"
-                        name="shipFirstName"
-                        placeholder="Jane"
+                        id="employerName"
+                        name="employerName"
+                        placeholder=""
                         pattern="([A-Z])[\w+.]{1,}"
-                        value={data.shipFirstName}
+                        value={data.employerFirstName}
                         onChange={handleChange}
                         disabled={data.sameAsBilling}
                     />
                 </div>
                 <div className="flex-col">
-                    <label htmlFor="shipLastName">Last Name</label>
+                    <label htmlFor="employerLocation">Location</label>
                     <input
                         type="text"
-                        id="shipLastName"
-                        name="shipLastName"
-                        placeholder="Doe"
+                        id="employerLocation"
+                        name="employerLocation"
+                        placeholder=""
                         pattern="([A-Z])[\w+.]{1,}"
-                        value={data.shipLastName}
+                        value={data.employerLocation}
                         onChange={handleChange}
                         disabled={data.sameAsBilling}
                     />
                 </div>
             </div>
 
-            <label htmlFor="shipAddress1">Address</label>
+            <label htmlFor="occupation">Occupation</label>
             <input
                 type="text"
-                id="shipAddress1"
-                name="shipAddress1"
-                placeholder="555 Wallaby Way"
+                id="occupation"
+                name="occupation"
+                placeholder=""
                 pattern="[\w\d\s.#]{2,}"
-                value={data.shipAddress1}
+                value={data.occupation}
                 onChange={handleChange}
                 disabled={data.sameAsBilling}
             />
 
-            <label htmlFor="shipAddress2"></label>
+            <label htmlFor="employerAddress">Address</label>
             <input
                 type="text"
-                id="shipAddress2"
-                name="shipAddress2"
-                placeholder="Apt. 2"
+                id="employerAddress"
+                name="employerAddress"
+                placeholder=""
                 pattern="[\w\d\s.#]{2,}"
-                value={data.shipAddress2}
+                value={data.employerAddress}
                 onChange={handleChange}
                 disabled={data.sameAsBilling}
             />
 
-            <label htmlFor="shipCity">City</label>
+            <label htmlFor="employerPhone">Phone</label>
             <input
                 type="text"
-                id="shipCity"
-                name="ship-city"
-                placeholder="New York"
+                id="employerPhone"
+                name="employerPhone"
+                placeholder=""
                 pattern="([A-Z])[\w\s.]{1,}"
-                value={data.shipCity}
+                value={data.employerPhone}
                 onChange={handleChange}
                 disabled={data.sameAsBilling}
             />
 
-            <label htmlFor="shipState">State</label>
+            {/* <label htmlFor="shipState">State</label>
             <select
                 id="shipState"
                 name="shipState"
@@ -141,8 +141,8 @@ const Shipping = () => {
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
-            </select>
-
+            </select> */}
+{/* 
             <label htmlFor="shipZipCode">Zip Code</label>
             <input
                 type="text"
@@ -154,7 +154,7 @@ const Shipping = () => {
                 value={data.shipZipCode}
                 onChange={handleChange}
                 disabled={data.sameAsBilling}
-            />
+            /> */}
         </>
     )
 

@@ -13,22 +13,20 @@ export const FormProvider = ({ children }) => {
     const [page, setPage] = useState(0)
 
     const [data, setData] = useState({
-        billFirstName: "",
-        billLastName: "",
-        billAddress1: "",
-        billAddress2: "",
-        billCity: "",
-        billState: "",
-        billZipCode: "",
+        firstName: "",
+        lastName: "",
+        nationality:'',
+        identificationCard:'',
+        postalAddress:'',
+        town:'',
+        email:'',
         sameAsBilling: false,
-        shipFirstName: "",
-        shipLastName: "",
-        shipAddress1: "",
-        shipAddress2: "",
-        shipCity: "",
-        shipState: "",
-        shipZipCode: "",
-        optInNews: false
+        employerName: "",
+        employerLocation:"",
+        occupation:'',
+        employerPhone:'',
+       
+       
     })
 
 
@@ -36,9 +34,9 @@ export const FormProvider = ({ children }) => {
         if (data.sameAsBilling) {
             setData(prevData => ({
                 ...prevData,
-                shipFirstName: prevData.billFirstName,
-                shipLastName: prevData.billLastName,
-                shipAddress1: prevData.billAddress1,
+                employerFirstName: prevData.billFirstName,
+                employerLastName: prevData.billLastName,
+                employerAddress1: prevData.billAddress1,
                 shipAddress2: prevData.billAddress2,
                 shipCity: prevData.billCity,
                 shipState: prevData.billState,
@@ -47,13 +45,10 @@ export const FormProvider = ({ children }) => {
         } else {
             setData(prevData => ({
                 ...prevData,
-                shipFirstName: "",
-                shipLastName: "",
-                shipAddress1: "",
-                shipAddress2: "",
-                shipCity: "",
-                shipState: "",
-                shipZipCode: ""
+                employerName: "",
+        employerLocation:"",
+        occupation:'',
+        employerPhone:'',
             }))
         }
     }, [data.sameAsBilling])
@@ -89,7 +84,7 @@ export const FormProvider = ({ children }) => {
         .every(Boolean)
 
     const canNextPage2 = Object.keys(data)
-        .filter(key => key.startsWith('ship') && key !== 'shipAddress2')
+        .filter(key => key.startsWith('employer') && key !== 'shipAddress2')
         .map(key => data[key])
         .every(Boolean)
 

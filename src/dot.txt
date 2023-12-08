@@ -1,301 +1,451 @@
+import React, { useState } from 'react';
+import { Form, Button, Row, Col, ProgressBar, Table } from 'react-bootstrap';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Banner2 from "./Banner2";
-import image51 from './assets/image51.png';
-import mpesa from './assets/mpesa.jpeg'
+const FirstStep = () => {
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    jobTitle: '',
+    creditCardNumber: '',
+  });
 
+  const handleNext = () => {
+    setStep(step + 1);
+  };
 
-const squareButtonStyle = {
-  width: "50%",
-  height: "50px",
-  marginTop: "1%",
-  borderRadius: "0",
-  background: "blue",
-  transition: "transform 0.3s ease",
-  };  
+  const handlePrev = () => {
+    setStep(step - 1);
+  };
 
-function PaymentModes() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log('Form submitted:', formData);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleDateChange = (date) => {
+    setFormData({
+      ...formData,
+      dateBirth: date,
+    });
+  };
+
   return (
+    <div style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '10px', margin: '40px' }}>
+      <ProgressBar now={(step / 3) * 100} label={`${step}/3`} className="mb-3" />
 
-    <div>
- <h2 className="service" style={{ marginTop: "4%", color: "orange" }}>
-        <strong>Payment Modes</strong>
-      </h2>
-<Container>
-      {/* Stack the columns on mobile by making one full-width and the other half-width */}
-      <Row>
-        <Col xs={12} md={8}>
-          
-          <div style={{ marginTop:"5%"}}>
-            <div>
-            <img
-            src={mpesa}
-            alt="Image Alt Text"
-            className="img-fluid"
-            style={{ marginTop: "7%", marginBottom: "7%" }}
-          />
-            </div>
-            <div>
-              <ul>
-                <li>Go to the <strong>Mpesa Menu</strong></li>
-                <li>Select <strong>Lipa na M-PESA</strong></li>
-                <li>Select <strong>Pay Bill</strong></li>
-                <li>Enter Business Number  <strong>: 400222</strong></li>
-                <li>Enter Account Number <strong>: 8484#</strong></li>
-              </ul>
-            </div>
-          </div>
-        </Col>
-        <Col xs={6} md={4}>
-        <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Mobile Loans
-</Button>
+      
 
-              </Link>
-            </Col>
-          </Row>
-
-          <Row className="mb-3" style={{ textDecoration: "underline", fontWeight: "bold" }}>
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Education Loan
-</Button>
-
-              </Link>
-            </Col>
-          </Row>   
+      {step === 1 && (
+ <Form onSubmit={handleNext}>
+ <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+<Col md={5}>
+ <Form.Group controlId="formFirstName">
+   <Form.Label>First Name</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your first name"
+     name="firstName"
+     value={formData.firstName}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%" , width:"80%"}}
+   />
+ </Form.Group>
+</Col>
+<Col md={5}>
+ <Form.Group controlId="formLastName">
+   <Form.Label>Last Name</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your last name"
+     name="lastName"
+     value={formData.lastName}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%", width:"80%" }}
+   />
+ </Form.Group>
+</Col>
+</Row>
 
 
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Utu Bora
-</Button>
 
-              </Link>
-            </Col>
-          </Row>
+
+<Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+<Col md={5}>
+ <Form.Group controlId="formtown">
+   <Form.Label>Town</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter the name of your town"
+     name="town"
+     value={formData.town}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%" , width:"80%"}}
+   />
+ </Form.Group>
+</Col>
+
+<Col md={5}>
+ <Form.Group controlId="formPhoneNumber">
+   <Form.Label>Mobile Number</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your phone number"
+     name="phoneNumber"
+     value={formData.phoneNumber}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%", width:"80%" }}
+   />
+ </Form.Group>
+</Col>
+</Row>
 
 
 
 
 
 
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Utu Bora
-</Button>
-
-              </Link>
-            </Col>
-          </Row>
 
 
-
-
-
-          <Row className="mb-3">
-            <Col>
-              <Link to="/join/borrow-from-us">
-              <Button
-  variant="primary"
-  size="lg"
-  style={{
-    ...squareButtonStyle,
-    backgroundColor: "#0096FF",
-    color: "white",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add a smooth transition for hover effect
-  }}
-  className="btn-hover"
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.color = "black";
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "#0096FF";
-    e.target.style.color = "white";
-  }}
->
-  Karibu Loan
-</Button>
-
-              </Link>
-            </Col>
-          </Row>
-
-
-
-
-
-
-          <h4 style={{ fontSize: "16px", color: "#333", lineHeight: "1.6" }}>
-            {/* <small>
-              Do not hesitate to reach out if you have inquiries regarding our
-              loan services.
-            </small> */}
-          </h4>
-          <div
-            style={{
-              marginTop: "20px",
-              backgroundColor: "#f8f9fa",
-              padding: "10px",
-              borderRadius: "5px",
-            }}
-          >
-            <h5 style={{ marginBottom: "10px" }}><strong>Visit Us</strong></h5>
-            <p style={{ fontSize: "14px", color: "#555" }}>
-              <strong>Nairobi Metropolis Office</strong><br/>
-              Tarikiville Mall, Mezzanine Floor<br/>
-              Namanga Rd,
-              Kitengela.<br/>
-              <p style={{ fontSize: "14px", color: "#555" }}>
-             <strong>
-             Phone: +254 748 015 761<br/>
-                   
-              </strong> 
-
-             
-            </p>
-            </p>
-
-            <p style={{ fontSize: "14px", color: "#555" }}>
-              <strong>Maua Office</strong><br/>
-              Kenduba Building , opposite Trebil cyber<br/>
-              Maua ,
-              Meru.
-              <p style={{ fontSize: "14px", color: "#555" }}>
-             <strong>Phone: +254 748 015 761</strong> <br/>
-                   
-
-             
-            </p>
-            </p>
-            <h4 style={{ marginBottom: "10px", marginTop: "20px" }}>
-              <strong>Contact Information</strong>
-            </h4>
-            <p style={{ fontSize: "14px", color: "#555" }}>
-             
-              
-              Email: info@unitysacco.com
-            </p>
-          </div>
-
-
-
-        </Col>
-      </Row>
-
-      {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
-      {/* <Row>
-        <Col xs={6} md={4}>
-          xs=6 md=4
-        </Col>
-        <Col xs={6} md={4}>
-          xs=6 md=4
-        </Col>
-        <Col xs={6} md={4}>
-          xs=6 md=4
-        </Col>
-      </Row> */}
-
-      {/* Columns are always 50% wide, on mobile and desktop */}
-      {/* <Row>
-        <Col xs={6}>xs=6</Col>
-        <Col xs={6}>xs=6</Col>
-      </Row> */}
-    </Container>
-
-    <div style={{marginTop:"7%"}}>
-    <Banner2/>
-    </div>
-   
-    </div>
+<Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+<Col md={5}>
+ <Form.Group controlId="formNationality">
+   <Form.Label>Nationality</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your nationality"
+     name="nationality"
+     value={formData.nationality}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%" , width:"80%"}}
     
+   />
+ </Form.Group>
+</Col>
+<Col md={5}>
+ <Form.Group controlId="formID">
+   <Form.Label>National I.D Number</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your ID Number"
+     name="iD"
+     value={formData.iD}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%" , width:"80%"}}
+   />
+ </Form.Group>
+</Col>
+</Row>
 
-   
 
 
+<Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+<Col md={5}>
+ <Form.Group controlId="formCounty">
+   <Form.Label>County</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your county"
+     name="county"
+     value={formData.county}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%", width:"80%" }}
+   />
+ </Form.Group>
+</Col>
+<Col md={5}>
+ <Form.Group controlId="formSubCounty">
+   <Form.Label>Sub-County</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your sub-county"
+     name="subcounty"
+     value={formData.subCounty}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%", width:"80%" }}
+   />
+ </Form.Group>
+</Col>
+</Row>
+
+
+<Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+<Col md={5}>
+ <Form.Group controlId="formPostalAddress">
+   <Form.Label>Postal address</Form.Label>
+   <Form.Control
+     type="text"
+     placeholder="Enter your postal address"
+     name="postaladdress"
+     value={formData.postaladdress}
+     onChange={handleInputChange}
+     style={{ marginLeft: "5%", width:"80%" }}
+   />
+ </Form.Group>
+</Col> 
+
+{/* <Col md={5}>
+ <Form.Group controlId="formDateBirth">
+   <Form.Label>Date of Birth  :</Form.Label>
+   <DatePicker
+           selected={formData.dateBirth}
+           onChange={handleDateChange}
+           dateFormat="MM/dd/yyyy"
+           placeholderText="Select date"
+           className="form-control"
+           style={{ }}
+         />
+ </Form.Group>
+</Col> */}
+
+
+</Row>
+
+
+
+
+
+
+   {/* ... Repeat similar changes for other rows */}
+
+  <div style={{marginBottom:"5%"}}>
+  <Button variant="primary" type="submit">
+     Next
+   </Button>
+
+  </div>
+  
+ </Form>
+
+      )}
+
+      {step === 2 && (
+       <Form onSubmit={handleNext}>
+       {/* <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+       <Col md={5}>
+       <Form.Group controlId="formFirstName">
+         <Form.Label>First Name</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your first name"
+           name="firstName"
+           value={formData.firstName}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%" , width:"80%"}}
+         />
+       </Form.Group>
+      </Col>
+      <Col md={5}>
+       <Form.Group controlId="formLastName">
+         <Form.Label>Last Name</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your last name"
+           name="lastName"
+           value={formData.lastName}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%", width:"80%" }}
+         />
+       </Form.Group>
+      </Col>
+      </Row> */}
+      
+      
+      
+      
+      <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+      <Col md={5}>
+       <Form.Group controlId="formemployerName">
+         <Form.Label>Employer Name</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Name of your company"
+           name="employerName"
+           value={formData.employerName}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%" , width:"80%"}}
+         />
+       </Form.Group>
+      </Col>
+      
+      <Col md={5}>
+       <Form.Group controlId="formLocation">
+         <Form.Label>Employer Location</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your employer's location"
+           name="location"
+           value={formData.location}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%", width:"80%" }}
+         />
+       </Form.Group>
+      </Col>
+      </Row>
+      
+      
+      
+      
+      
+      
+      
+      
+      <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+      <Col md={5}>
+       <Form.Group controlId="formpostalAddress">
+         <Form.Label>Postal Address</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your employer's address"
+           name="postalAddress"
+           value={formData.postalAddress}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%" , width:"80%"}}
+          
+         />
+       </Form.Group>
+      </Col>
+      <Col md={5}>
+       <Form.Group controlId="formphoneNumberr">
+         <Form.Label>Phone Number</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your employer phone number"
+           name="phoneNumber"
+           value={formData.phoneNumber}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%" , width:"80%"}}
+         />
+       </Form.Group>
+      </Col>
+      </Row>
+      
+      
+      
+      <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+      <Col md={5}>
+       <Form.Group controlId="formoccupation">
+         <Form.Label>Occupation</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your occupation"
+           name="occupation"
+           value={formData.occupation}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%", width:"80%" }}
+         />
+       </Form.Group>
+      </Col>
+      <Col md={5}>
+       <Form.Group controlId="formSubCounty">
+         <Form.Label>Sub-County</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your sub-county"
+           name="subcounty"
+           value={formData.subCounty}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%", width:"80%" }}
+         />
+       </Form.Group>
+      </Col>
+      </Row>
+      
+      
+      <Row className="justify-content-between" style={{ marginBottom: '15px' }}>
+      <Col md={5}>
+       <Form.Group controlId="formPostalAddress">
+         <Form.Label>Postal address</Form.Label>
+         <Form.Control
+           type="text"
+           placeholder="Enter your postal address"
+           name="postaladdress"
+           value={formData.postaladdress}
+           onChange={handleInputChange}
+           style={{ marginLeft: "5%", width:"80%" }}
+         />
+       </Form.Group>
+      </Col> 
+      
+      {/* <Col md={5}>
+       <Form.Group controlId="formDateBirth">
+         <Form.Label>Date of Birth  :</Form.Label>
+         <DatePicker
+                 selected={formData.dateBirth}
+                 onChange={handleDateChange}
+                 dateFormat="MM/dd/yyyy"
+                 placeholderText="Select date"
+                 className="form-control"
+                 style={{ }}
+               />
+       </Form.Group>
+      </Col> */}
+      
+      
+      </Row>
+      
+      
+      
+      
+      
+      
+         {/* ... Repeat similar changes for other rows */}
+      
+        <div style={{marginBottom:"5%"}}>
+        <Button variant="primary" type="submit">
+           Next
+         </Button>
+      
+        </div>
+        
+       </Form>
+      )}
+
+
+{step === 3 && (
+
+<div>
+{/* Step 3 content */}
+// Example Next of Kin Section
+<Form.Group controlId="formNextOfKin">
+  <Form.Label>Next of Kin Information</Form.Label>
+  
+  <Form.Group controlId="formKinName">
+    <Form.Label>Full Name</Form.Label>
+    <Form.Control type="text" placeholder="Enter full name" />
+  </Form.Group>
+  
+  <Form.Group controlId="formKinRelationship">
+    <Form.Label>Relationship</Form.Label>
+    <Form.Control type="text" placeholder="Enter relationship" />
+  </Form.Group>
+  
+  {/* Other Next of Kin fields go here */}
+</Form.Group>
+
+    <div style={{ marginBottom: '5%' }}>
+  <Button variant="primary" onClick={handleNext}>
+    Next
+  </Button>
+</div>
+</div>
+
+ 
+      )}
+    </div>
   );
-}
+};
 
-export default PaymentModes;
+export default FirstStep;

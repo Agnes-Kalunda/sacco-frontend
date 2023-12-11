@@ -21,6 +21,12 @@ import Register from "./Register";
 import Savings from "./Savings";
 import Socials from "./Socials";
 import LoanProducts from './LoanProducts';
+import StepThree from './StepThree'
+import Update from './Update';
+// import Read from './Read';
+import Create from './Create';
+
+
 
 function App() {
   return (
@@ -44,6 +50,10 @@ function App() {
             <Route path="borrow-from-us" element={<Loans />} />
             <Route path="loan-eligibility" element={<LoanEligibility />} />
             <Route path="bosa-products" element={<LoanProducts />} />
+            <Route path="/join/create" element={<Create />} />
+            <Route path="/join/update/:id" element={<Update />} />
+            
+            
             
           </Route>
 
@@ -56,6 +66,22 @@ function App() {
             <Route path="gallery" element={<Gallery />} />
             <Route path="faqs" element={<Faqs />} />
           </Route>
+
+
+        
+          
+          {/* <Route path="/create" element={<Create />} />
+          <Route path="/create/add" element={<Add />} /> */}
+          {/* <Route path="/update/:id" element={<Update />} />
+          <Route path="/read/:id" element={<Read />} />  */}
+
+
+
+          <Route path="/StepThree" element={<StepThree />} />
+
+
+
+
 
           <Route path="login" element={<Login />} />
         </Routes>

@@ -26,7 +26,7 @@ const Shipping = () => {
                         name="employerName"
                         placeholder=""
                         pattern="([A-Z])[\w+.]{1,}"
-                        value={data.employerFirstName}
+                        value={data.employerName}
                         onChange={handleChange}
                         disabled={data.sameAsBilling}
                     />

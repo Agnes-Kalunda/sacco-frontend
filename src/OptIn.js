@@ -3,11 +3,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function OptIn() {
-  const [student, setStudent] = useState([]);
+  const [students, setStudents] = useState([]);
 
   useEffect(() => {
     axios.get("your-api-endpoint") // Replace "your-api-endpoint" with the actual API endpoint
-      .then(res => setStudent(res.data))
+      .then(res => setStudents(res.data))
       .catch(err => console.log(err));
   }, []);
 
@@ -22,23 +22,29 @@ function OptIn() {
 
   return (
     <div className="bg-white">
-      <div className="w-50 bg-white rounded p-3 mx-3"> {/* Updated margin class to mx-3 */}
-        <Link to="create" className="btn btn-success" style={{marginLeft:'1%'}}> Add + </Link>
+      <div className="w-75 bg-white rounded p-3 mx-auto">
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Action</th>
+              <th style={{ width: '15%', margin: '10px' }}>Name</th>
+              <th style={{ width: '15%', margin: '10px' }}>Relation</th>
+              <th style={{ width: '10%', margin: '10px' }}>ID</th>
+              <th style={{ width: '15%', margin: '10px' }}>Phone</th>
+              <th style={{ width: '15%', margin: '10px' }}>DOB</th>
+              <th style={{ width: '15%', margin: '10px' }}>Percentage</th>
+              <th style={{ width: '15%', margin: '10px' }}>Actions</th>
             </tr>
           </thead>
 
           <tbody>
-            {student.map((data, i) => (
+            {students.map((data, i) => (
               <tr key={i}>
                 <td>{data.Name}</td>
                 <td>{data.Email}</td>
-
+                <td>{data.PP}</td>
+                <td>{data.Phone}</td>
+                <td>{data.DOB}</td>
+                <td>{data.Percentage}</td>
                 <td>
                   <Link to={`update/${data.ID}`} className='btn btn-primary'>Update</Link>
                   <button className='btn btn-danger ms-2' onClick={e => handleDelete(data.ID)}>Delete</button>
@@ -47,6 +53,8 @@ function OptIn() {
             ))}
           </tbody>
         </table>
+
+        <Link to="create" className="btn btn-success" style={{ marginLeft: '95%' }}>Add</Link>
       </div>
     </div>
   );

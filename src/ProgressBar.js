@@ -24,4 +24,4 @@ const ProgressBar = () => {
         </section>
     )
 }
-export default ProgressBar
+export default ProgressBar;

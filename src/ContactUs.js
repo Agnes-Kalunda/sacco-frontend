@@ -55,8 +55,8 @@ const ContactUs = () => {
                 <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png" alt="Address" />
               </div>
               <div className="">
-                <h6 className="font-weight-medium">Address</h6>
-                <p className="">Tarikiville Mall.
+                {/* <h6 className="font-weight-medium">Address</h6> */}
+                <p className=""  style={{paddingTop:"15%"}}>Tarikiville Mall.
                   <br /> Kitengela</p>
               </div>
             </div>
@@ -67,8 +67,8 @@ const ContactUs = () => {
                 <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png" alt="Phone" />
               </div>
               <div className="">
-                <h6 className="font-weight-medium">Phone</h6>
-                <p className="">+254 748 015 761
+                {/* <h6 className="font-weight-medium">Phone</h6> */}
+                <p className="" style={{paddingTop:"15%"}}>+254 748 015 761
                   <br /> +254 748 015 761</p>
               </div>
             </div>
@@ -79,8 +79,8 @@ const ContactUs = () => {
                 <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png" alt="Email" />
               </div>
               <div className="">
-                <h6 className="font-weight-medium">Email</h6>
-                <p className="">
+                {/* <h6 className="font-weight-medium">Email</h6> */}
+                <p className="" style={{paddingTop:"15%"}}>
                   info@unitysacco.com
                   <br />
                 </p>

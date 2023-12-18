@@ -3,11 +3,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function OptIn() {
-  const [students, setStudents] = useState([]);
+  const [kin, setKin] = useState([]);
 
   useEffect(() => {
     axios.get("your-api-endpoint") // Replace "your-api-endpoint" with the actual API endpoint
-      .then(res => setStudents(res.data))
+      .then(res => setKin(res.data))
       .catch(err => console.log(err));
   }, []);
 
@@ -37,7 +37,7 @@ function OptIn() {
           </thead>
 
           <tbody>
-            {students.map((data, i) => (
+            {kin.map((data, i) => (
               <tr key={i}>
                 <td>{data.Name}</td>
                 <td>{data.Email}</td>

@@ -74,19 +74,15 @@ function Footer() {
             </h6>
             <p className="hover-black">
             <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
-                   <small>BOSA Shares</small> 
+                   <small>Alpha Deposits</small> 
                   </Link>
             </p>
             <p className="hover-black">
             <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
-                   <small>Handshake deposits</small> 
+                   <small>Shares Savings</small> 
                   </Link>
             </p>
-            <p className="hover-black">
-            <Link to= "/join/save-with-us" className="btn btn-orange" style={{color: "white"}}> {/* Apply the custom class */}
-                   <small>Jikakamue Savings</small> 
-                  </Link>
-            </p>
+          
           </div>
 
           <div className="col-md-2 mt-3">

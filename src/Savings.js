@@ -147,7 +147,7 @@ function Loans() {
 
           <CustomAccordionItem
             collapseId={1}
-            headerTitle={<strong>ALPHA DEPOSITS SAVINGS ACCOUNT</strong>}
+            headerTitle={<strong>ALPHA DEPOSITS SAVINGS ACCOUNTT</strong>}
             isOpen={openAccordionId === 1}
             onToggle={handleAccordionToggle}
           > 
